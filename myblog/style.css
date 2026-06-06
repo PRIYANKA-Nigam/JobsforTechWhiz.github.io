@@ -1,0 +1,39 @@
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f5f5f5;
+}
+
+header{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+#posts-container{
+    max-width:1000px;
+    margin:auto;
+    padding:20px;
+}
+
+.post-card{
+    background:white;
+    border-radius:10px;
+    padding:20px;
+    margin-bottom:20px;
+    box-shadow:0 2px 10px rgba(0,0,0,.1);
+}
+
+.post-card h2{
+    margin-top:0;
+}
+
+.read-more{
+    display:inline-block;
+    padding:10px 15px;
+    background:#0066ff;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+}
