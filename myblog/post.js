@@ -1,41 +1,50 @@
 const params =
 new URLSearchParams(window.location.search);
 
-const postId =
+const id =
 params.get("id");
 
-const feedUrl =
-"https://interviewprepforinsiders.blogspot.com/feeds/posts/default?alt=json&max-results=500";
-
-fetch(feedUrl)
-.then(response => response.json())
-.then(data => {
-
-    const posts =
-    data.feed.entry;
+function loadPost(data){
 
     const post =
-    posts.find(item =>
-        item.id.$t.includes(postId)
+    data.feed.entry.find(
+        item => item.id.$t.includes(id)
     );
 
-    if(post){
+    if(!post){
 
-        document.title =
-        post.title.$t;
+        document.getElementById(
+            "post-content"
+        ).innerHTML =
+        "<h2>Post not found</h2>";
 
-        document.getElementById("post-content")
-        .innerHTML = `
-
-        <h1>${post.title.$t}</h1>
-
-        <div>
-
-        ${post.content.$t}
-
-        </div>
-
-        `;
+        return;
     }
 
-});
+    console.log(post.content.$t);
+
+    let content = post.content.$t;
+
+    content = content.replace(
+        /src="\/\//g,
+        'src="https://'
+    );
+
+    document.title =
+    post.title.$t;
+
+    document.getElementById(
+        "post-content"
+    ).innerHTML = `
+        <h1>${post.title.$t}</h1>
+        <div>${content}</div>
+    `;
+}
+
+const script =
+document.createElement("script");
+
+script.src =
+"https://interviewprepforinsiders.blogspot.com/feeds/posts/default?alt=json-in-script&max-results=100&callback=loadPost";
+
+document.body.appendChild(script);
