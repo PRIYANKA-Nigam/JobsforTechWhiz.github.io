@@ -10,7 +10,10 @@ function loadPost(data){
     data.feed.entry.find(
         item => item.id.$t.includes(id)
     );
-
+const currentCategories =
+post.category
+? post.category.map(cat => cat.term)
+: [];
     if(!post){
 
         document.getElementById(
@@ -30,6 +33,34 @@ function loadPost(data){
         'src="https://'
     );
 
+//     const relatedPosts =
+// data.feed.entry
+// .filter(item =>
+
+//     item.id.$t !== post.id.$t
+
+// )
+// .slice(0,4);
+
+const relatedPosts =
+data.feed.entry.filter(item => {
+
+    if(item.id.$t === post.id.$t){
+        return false;
+    }
+
+    if(!item.category){
+        return false;
+    }
+
+    return item.category.some(cat =>
+        currentCategories.includes(cat.term)
+    );
+
+}).slice(0,4);
+
+console.log("Related:", relatedPosts.length);
+console.log(relatedPosts);
     document.title =
     post.title.$t;
 
@@ -39,6 +70,38 @@ function loadPost(data){
         <h1>${post.title.$t}</h1>
         <div>${content}</div>
     `;
+    const relatedContainer =
+document.getElementById(
+    "related-posts"
+);
+
+relatedContainer.innerHTML = "";
+console.log(
+document.getElementById("related-posts")
+);
+relatedPosts.forEach(item=>{
+
+    const title =
+    item.title.$t;
+
+    const postId =
+    item.id.$t.split("-").pop();
+
+    relatedContainer.innerHTML += `
+
+    <div class="related-card">
+
+        <a href="post.html?id=${postId}">
+
+        ${title}
+
+        </a>
+
+    </div>
+
+    `;
+
+});
 }
 
 const script =

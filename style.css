@@ -140,3 +140,75 @@ header{
     background:#111827;
     color:white;
 }
+.related-heading{
+    margin-top:40px;
+    text-align:center;
+}
+
+#related-posts{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:15px;
+
+    margin-top:20px;
+}
+
+.related-card{
+
+    padding:15px;
+
+    background:white;
+
+    border-radius:10px;
+
+    box-shadow:
+    0 2px 8px rgba(0,0,0,.08);
+
+}
+.site-footer{
+
+    margin-top:50px;
+
+    background:#0f172a;
+
+    color:white;
+
+    padding:40px 20px;
+}
+
+.footer-content{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    text-align:center;
+}
+
+.footer-links{
+
+    margin:20px 0;
+}
+
+.footer-links a{
+
+    color:white;
+
+    text-decoration:none;
+
+    margin:0 12px;
+}
+
+.footer-links a:hover{
+
+    text-decoration:underline;
+}
+
+.copyright{
+
+    opacity:.8;
+}
