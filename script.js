@@ -34,6 +34,30 @@ document
 
 });
 function loadPosts(data){
+    const featured =
+allPosts.slice(0,3);
+console.log("RENDERING POST");
+const featuredContainer =
+document.getElementById(
+"featured-posts"
+);
+
+featured.forEach(post=>{
+
+const slug =
+post.title.$t
+.toLowerCase()
+.replace(/[^a-z0-9]+/g,"-")
+.replace(/^-|-$/g,"");
+
+document.getElementById(
+    "post-content"
+).innerHTML = `
+    <h1>${post.title.$t}</h1>
+    <div>${content}</div>
+`;
+
+});
     console.log("script.js loaded");
 console.log(
   "Total Blogger Posts:",
@@ -44,36 +68,133 @@ console.log(
       data.feed.entry.length
     );
  allPosts = data.feed.entry;
-//console.log(allPosts.length);
-renderCategories();
+renderFeaturedPosts();
+renderSidebarCategories();
+renderCategories();renderLatestPosts();
 renderPosts();
 
-    // const container =
-    // document.getElementById("posts-container");
-
-    // container.innerHTML = "";
+   
 
     posts.forEach(post => {
 
-// const imgMatch =
-// post.content.$t.match(/<img[^>]+src="([^">]+)"/i);
-
-// if(imgMatch){
-
-//     console.log("POST:", title);
-//     console.log("IMAGE URL:", imgMatch[1]);
-
-//     thumbnail = imgMatch[1];
-// }
-
-// console.log("TITLE:", title);
-// console.log("THUMB:", thumbnail);
 
     });
 
 }
 //  changing  href="${postUrl}" with   href="post.html?url=${encodedUrl}"> 
 // so that on clicking read more blogger url will come as a query parameter ? 
+function renderLatestPosts(){
+
+const container =
+document.getElementById(
+"latest-posts"
+);
+
+container.innerHTML = "";
+
+allPosts.slice(0,5).forEach(post=>{
+
+const slug =
+post.title.$t
+.toLowerCase()
+.replace(/[^a-z0-9]+/g,"-")
+.replace(/^-|-$/g,"");
+
+container.innerHTML += `
+
+<div>
+
+<a href="post.html?slug=${slug}">
+
+${post.title.$t}
+
+</a>
+
+</div>
+
+`;
+
+});
+
+}
+function renderSidebarCategories(){
+
+const container =
+document.getElementById(
+"sidebar-categories"
+);
+
+container.innerHTML = "";
+
+const categories =
+new Set();
+
+allPosts.forEach(post=>{
+
+if(post.category){
+
+post.category.forEach(cat=>{
+
+categories.add(cat.term);
+
+});
+
+}
+
+});
+
+categories.forEach(cat=>{
+
+container.innerHTML += `
+
+<div>
+
+<a href="#"
+onclick="filterCategory('${cat}')">
+
+${cat}
+
+</a>
+
+</div>
+
+`;
+
+});
+
+}
+function renderFeaturedPosts(){
+
+const featuredContainer =
+document.getElementById(
+"featured-posts"
+);
+
+featuredContainer.innerHTML = "";
+
+allPosts.slice(0,5).forEach(post => {
+
+const slug =
+post.title.$t
+.toLowerCase()
+.replace(/[^a-z0-9]+/g,"-")
+.replace(/^-|-$/g,"");
+
+featuredContainer.innerHTML += `
+
+<div class="featured-card">
+
+<a href="post.html?slug=${slug}">
+${post.title.$t}
+</a>
+
+</div>
+
+`;
+
+});
+
+}
 function renderCategories(){
 
     const categories = new Set(["All"]);

@@ -18,15 +18,25 @@ content="website">
 <meta property="og:url"
 content="https://priyanka-nigam.github.io/JobsforTechWhiz.github.io/">
 <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
+   
     <header>
 
-<h1>JobsForTechWhiz</h1>
+<h1>
+
+<a href="index.html">
+
+JobsForTechWhiz
+
+</a>
+
+</h1>
 
 <nav>
-
+<div class="nav-left">
 <a href="index.html">Home</a>
 
 <a href="#">Java</a>
@@ -37,22 +47,56 @@ content="https://priyanka-nigam.github.io/JobsforTechWhiz.github.io/">
 <a href="#">Technical</a>
 
 <a href="#">HR|Managerial</a>
+</div>
+ <button id="theme-toggle">
 
+🌙 Dark Mode
+
+</button>
 </nav>
 
 </header>
+
 <input
 id="search"
 placeholder="Search posts...">
-<!-- <header>
-<h1>JobsForTechWhiz</h1>
-</header> -->
+
 <div id="category-filters"></div>
+
+<div class="page-layout">
+
+<div class="main-content">
+
+<div id="posts-container">
+
+Loading Posts...
+
+</div>
+
+<div id="pagination"></div>
+
+</div>
+
+<aside class="sidebar">
+
+<h3>Featured Posts</h3>
+<div id="featured-posts"></div>
+
+<h3>Categories</h3>
+<div id="sidebar-categories"></div>
+
+<h3>Latest Posts</h3>
+<div id="latest-posts"></div>
+
+</aside>
+
+</div>
+<!-- <div id="category-filters"></div>
 
 <div id="posts-container"></div>
 
 <div id="pagination"></div>
-<div id="posts-container">
+<div id="posts-container"> -->
 
 Loading Posts...
 
@@ -96,5 +140,6 @@ Loading Posts...
     </div>
 
 </footer>
+<script src="theme.js"></script>
 </body>
 </html>

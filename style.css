@@ -243,3 +243,184 @@ header{
 .related-link:hover{
     text-decoration:underline;
 }
+.post-nav{
+margin:20px 0;
+}
+
+.back-btn{
+display:inline-block;
+padding:10px 18px;
+background:#2563eb;
+color:white;
+text-decoration:none;
+border-radius:8px;
+font-weight:600;
+}
+
+.back-btn:hover{
+opacity:.9;
+}
+.dark .post-card h2,
+.dark .sidebar h3,
+.dark .featured-card a,
+.dark .latest-link a{
+    color:white !important;
+}
+
+.dark #post-content,
+.dark #post-content *{
+    color:white !important;
+}
+.dark #post-content{
+    color:white;
+}
+
+.dark #post-content p,
+.dark #post-content span,
+.dark #post-content div,
+.dark #post-content li,
+.dark #post-content h1,
+.dark #post-content h2,
+.dark #post-content h3,
+.dark #post-content h4{
+    color:white !important;
+}
+
+.dark #post-content a{
+    color:#60a5fa !important;
+}
+.dark img{
+    opacity:1;
+}
+
+.dark{
+background:#111827;
+color:white;
+}
+
+.dark .post-card{
+background:#1f2937;
+color:white;
+}
+
+.dark a{
+color:#60a5fa;
+}
+.dark .post-card{
+
+background:#1f2937;
+
+}
+
+.dark .post-card h2{
+
+color:white;
+
+}
+
+.dark .post-card p{
+
+color:#d1d5db;
+
+}
+.dark .related-card h4{
+
+color:white;
+
+}
+
+.dark .sidebar{
+
+background:#1f2937;
+
+color:white;
+
+}
+nav{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:15px 20px;
+
+}
+.nav-left{
+
+display:flex;
+
+align-items:center;
+
+gap:20px;
+
+}
+#featured-posts{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(250px,1fr));
+
+gap:20px;
+
+margin:20px 0;
+
+}
+
+.featured-card{
+
+padding:12px;
+
+margin-bottom:15px;
+
+border-bottom:1px solid #ddd;
+
+}
+
+.page-layout{
+
+display:grid;
+
+grid-template-columns:3fr 1fr;
+
+gap:25px;
+
+align-items:start;
+
+}
+
+.sidebar{
+
+background:white;
+
+padding:20px;
+
+border-radius:12px;
+
+box-shadow:0 4px 10px rgba(0,0,0,.08);
+
+position:sticky;
+
+top:20px;
+
+}
+.sidebar h3{
+
+border-bottom:2px solid #2563eb;
+
+padding-bottom:8px;
+
+margin-top:25px;
+
+}
+.sidebar a{
+
+display:block;
+
+padding:8px 0;
+
+text-decoration:none;
+
+}

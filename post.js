@@ -68,6 +68,15 @@ post.title.$t +
         'src="https://'
     );
 
+content = content.replace(
+/color\s*:\s*black/gi,
+'color:white'
+);
+
+content = content.replace(
+/color\s*:\s*#000000/gi,
+'color:white'
+);
 
 const relatedPosts =
 data.feed.entry.filter(item => {
@@ -102,13 +111,36 @@ console.log("Related:", relatedPosts.length);
 console.log(relatedPosts);
     document.title =
     post.title.$t;
+let category =
+currentCategories.length
+? currentCategories[0]
+: "General";
 
-    document.getElementById(
-        "post-content"
-    ).innerHTML = `
-        <h1>${post.title.$t}</h1>
-        <div>${content}</div>
-    `;
+  document.getElementById(
+"post-content"
+).innerHTML = `
+
+<div class="breadcrumb">
+
+<a href="index.html">
+Home
+</a>
+
+>
+
+<span>${category}</span>
+
+>
+
+<span>${post.title.$t}</span>
+
+</div>
+
+<h1>${post.title.$t}</h1>
+
+<div>${content}</div>
+
+`;
     const relatedContainer =
 document.getElementById(
     "related-posts"
@@ -147,7 +179,7 @@ console.log(
     if(item.media$thumbnail){
         thumb = item.media$thumbnail.url;
     }
-alert("POSTJS UPDATED");
+
     relatedContainer.innerHTML += `
     <div class="related-card">
 
