@@ -159,14 +159,26 @@ header{
 
 .related-card{
 
+    display:block;
+
+    text-decoration:none;
+
+    color:inherit;
+
     padding:15px;
 
     background:white;
 
     border-radius:10px;
 
-    box-shadow:
-    0 2px 8px rgba(0,0,0,.08);
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+
+    transition:.3s;
+}
+
+.related-card:hover{
+
+    transform:translateY(-3px);
 
 }
 .site-footer{
@@ -219,4 +231,15 @@ header{
     object-fit:cover;
     border-radius:8px;
     margin-bottom:10px;
+}
+.related-link{
+    display:block;
+    text-decoration:none;
+    color:#2563eb;
+    font-weight:bold;
+    margin-top:10px;
+}
+
+.related-link:hover{
+    text-decoration:underline;
 }

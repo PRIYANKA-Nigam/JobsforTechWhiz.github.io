@@ -7,7 +7,7 @@ const slug =
 new URLSearchParams(
 window.location.search
 ).get("slug");
-
+console.log("POST JS VERSION 999");
 function loadPost(data){
 
 
@@ -68,14 +68,6 @@ post.title.$t +
         'src="https://'
     );
 
-//     const relatedPosts =
-// data.feed.entry
-// .filter(item =>
-
-//     item.id.$t !== post.id.$t
-
-// )
-// .slice(0,4);
 
 const relatedPosts =
 data.feed.entry.filter(item => {
@@ -131,32 +123,50 @@ finalRelatedPosts.forEach(item=>{
     const title =
     item.title.$t;
 
-    const postId =
-    item.id.$t.split("-").pop();
+    const postSlug =
+    item.title.$t
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g,"-")
+    .replace(/^-|-$/g,"");
+    console.log(
+"TITLE =", title
+);
+
+console.log(
+"SLUG =", postSlug
+);
+
+    console.log(
+    "Related:",
+    item.title.$t,
+    postSlug
+    );
 
     let thumb = "";
 
-if(item.media$thumbnail){
-    thumb = item.media$thumbnail.url;
-}
+    if(item.media$thumbnail){
+        thumb = item.media$thumbnail.url;
+    }
+alert("POSTJS UPDATED");
+    relatedContainer.innerHTML += `
+    <div class="related-card">
 
-relatedContainer.innerHTML += `
-<div class="related-card">
+        ${thumb ? `
+        <img
+        src="${thumb}"
+        class="related-thumb">
+        ` : ""}
 
-    ${thumb ? `
-    <img
-    src="${thumb}"
-    class="related-thumb">
-    ` : ""}
-
-    <a href="post.html?slug=${slug}">
+        <a
+        href="post.html?slug=${postSlug}">
         ${title}
-    </a>
+        </a>
 
-</div>
-`;
+    </div>
+    `;
 
 });
+
 }
 
 const script =
