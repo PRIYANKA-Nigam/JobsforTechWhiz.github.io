@@ -167,6 +167,10 @@ if(searchTerm){
     pagePosts.forEach(post => {
 
        const title = post.title.$t;
+       const slug = title
+.toLowerCase()                      //to change url query string with path variable {? -> /}
+.replace(/[^a-z0-9]+/g,"-")
+.replace(/^-|-$/g,"");
 
         const content =
         post.content.$t
@@ -210,7 +214,7 @@ container.innerHTML += `
     <p>${summary}...</p>
 
     <a class="read-more"
-       href="post.html?id=${postId}">
+      href="post.html?slug=${slug}">
        Read More
     </a>
 

@@ -1,15 +1,47 @@
-const params =
-new URLSearchParams(window.location.search);
+// const params =
+// new URLSearchParams(window.location.search);
 
-const id =
-params.get("id");
+// const id =
+// params.get("id");
+const slug =
+new URLSearchParams(
+window.location.search
+).get("slug");
 
 function loadPost(data){
 
-    const post =
-    data.feed.entry.find(
-        item => item.id.$t.includes(id)
-    );
+
+   const post =
+data.feed.entry.find(item => {
+
+const postSlug =
+item.title.$t
+.toLowerCase()
+.replace(/[^a-z0-9]+/g,"-")
+.replace(/^-|-$/g,"");
+
+return postSlug === slug;
+
+});
+
+const summary =
+post.content.$t
+.replace(/<[^>]+>/g,'')
+.substring(0,160);
+
+const metaDesc =
+document.querySelector(
+'meta[name="description"]'
+);
+
+if(metaDesc){
+
+metaDesc.setAttribute(
+"content",
+summary
+);
+
+}
 const currentCategories =
 post.category
 ? post.category.map(cat => cat.term)
@@ -24,6 +56,9 @@ post.category
         return;
     }
 
+    document.title =
+post.title.$t +
+" | JobsForTechWhiz";
     console.log(post.content.$t);
 
     let content = post.content.$t;
@@ -59,6 +94,18 @@ data.feed.entry.filter(item => {
 
 }).slice(0,4);
 
+let finalRelatedPosts = relatedPosts; //for the case when there r no relatable post
+
+if(finalRelatedPosts.length === 0){
+
+    finalRelatedPosts =
+    data.feed.entry
+    .filter(item =>
+        item.id.$t !== post.id.$t
+    )
+    .slice(0,4);
+
+}
 console.log("Related:", relatedPosts.length);
 console.log(relatedPosts);
     document.title =
@@ -79,7 +126,7 @@ relatedContainer.innerHTML = "";
 console.log(
 document.getElementById("related-posts")
 );
-relatedPosts.forEach(item=>{
+finalRelatedPosts.forEach(item=>{
 
     const title =
     item.title.$t;
@@ -87,19 +134,27 @@ relatedPosts.forEach(item=>{
     const postId =
     item.id.$t.split("-").pop();
 
-    relatedContainer.innerHTML += `
+    let thumb = "";
 
-    <div class="related-card">
+if(item.media$thumbnail){
+    thumb = item.media$thumbnail.url;
+}
 
-        <a href="post.html?id=${postId}">
+relatedContainer.innerHTML += `
+<div class="related-card">
 
+    ${thumb ? `
+    <img
+    src="${thumb}"
+    class="related-thumb">
+    ` : ""}
+
+    <a href="post.html?slug=${slug}">
         ${title}
+    </a>
 
-        </a>
-
-    </div>
-
-    `;
+</div>
+`;
 
 });
 }
