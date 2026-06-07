@@ -1,29 +1,36 @@
-let allPosts = [];
+let searchTerm = ""; //right now on searching any text only current paginated page cards r showing not from
+                       //page 2,3,4 .now we want search through all pages 
+let allPosts = []; 
 let currentPage = 1;
 const postsPerPage = 9;
 let currentCategory = "All";
 document
 .getElementById("search")
 .addEventListener("input",function(){
-
-    const term =
+    searchTerm =
     this.value.toLowerCase();
 
-    document
-    .querySelectorAll(".post-card")
-    .forEach(card=>{
+    currentPage = 1;
 
-        const title =
-        card.querySelector("h2")
-        .innerText
-        .toLowerCase();
+    renderPosts();
+    // const term =
+    // this.value.toLowerCase();
 
-        card.style.display =
-        title.includes(term)
-        ? ""
-        : "none";
+    // document
+    // .querySelectorAll(".post-card")
+    // .forEach(card=>{
 
-    });
+    //     const title =
+    //     card.querySelector("h2")
+    //     .innerText
+    //     .toLowerCase();
+
+    //     card.style.display =
+    //     title.includes(term)
+    //     ? ""
+    //     : "none";
+
+    // });
 
 });
 function loadPosts(data){
@@ -48,19 +55,19 @@ renderPosts();
 
     posts.forEach(post => {
 
-const imgMatch =
-post.content.$t.match(/<img[^>]+src="([^">]+)"/i);
+// const imgMatch =
+// post.content.$t.match(/<img[^>]+src="([^">]+)"/i);
 
-if(imgMatch){
+// if(imgMatch){
 
-    console.log("POST:", title);
-    console.log("IMAGE URL:", imgMatch[1]);
+//     console.log("POST:", title);
+//     console.log("IMAGE URL:", imgMatch[1]);
 
-    thumbnail = imgMatch[1];
-}
+//     thumbnail = imgMatch[1];
+// }
 
-console.log("TITLE:", title);
-console.log("THUMB:", thumbnail);
+// console.log("TITLE:", title);
+// console.log("THUMB:", thumbnail);
 
     });
 
@@ -94,7 +101,7 @@ function renderCategories(){
 
         container.innerHTML += `
         <button
-        class="cat-btn"
+      class="cat-btn ${cat === currentCategory ? 'active' : ''}"
         onclick="filterCategory('${cat}')">
 
         ${cat}
@@ -136,7 +143,18 @@ function renderPosts(){
         );
 
     }
+if(searchTerm){
 
+    filteredPosts =
+    filteredPosts.filter(post =>
+
+        post.title.$t
+        .toLowerCase()
+        .includes(searchTerm)
+
+    );
+
+}
     const start =
     (currentPage - 1) * postsPerPage;
 
@@ -218,10 +236,10 @@ function renderPagination(totalPosts){
 
         container.innerHTML += `
         <button
-        class="page-btn"
-        onclick="changePage(${i})">
+       class="page-btn ${i===currentPage ? 'active-page' : ''}"
+onclick="changePage(${i})">
 
-        ${i}
+${i}
 
         </button>
         `;
