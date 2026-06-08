@@ -890,3 +890,58 @@ body.dark-mode .image-box{
 
     background:#163d84 !important;
 }
+.post-nav-buttons{
+    display:flex;
+    gap:12px;
+    margin:20px 0;
+}
+
+.nav-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:10px 18px;
+
+    border-radius:8px;
+    text-decoration:none;
+
+    background:#2563eb;
+    color:#fff;
+
+    border:none;
+    cursor:pointer;
+
+    font-size:14px;
+    font-weight:600;
+
+    transition:0.3s;
+}
+
+.nav-btn:hover{
+    opacity:0.9;
+    transform:translateY(-1px);
+}
+body.dark-mode .nav-btn{
+    background:#374151;
+    color:#fff;
+}
+
+body.dark-mode .nav-btn:hover{
+    background:#4b5563;
+}
+body.dark-mode .image-card p{
+    position:static !important;
+    top:auto !important;
+    left:auto !important;
+    bottom:auto !important;
+    right:auto !important;
+
+    transform:none !important;
+
+    margin-top:10px !important;
+
+    display:block !important;
+
+    color:#2196f3 !important;
+}

@@ -27,16 +27,29 @@ function loadPage(data){
 
         return;
     }
+let content = page.content.$t;
+content = content.replace(
+    /Interview\s*Prep\s*For\s*Insiders/gi,
+    "JobsForTechWhiz"
+);
+if(slug === "privacy-policy"){
+
+    content = content.replace(
+        /Last Updated:.*?</i,
+        "Last Updated: 9 June 2026<"
+    ); 
+
+}
 
     document.title =
     page.title.$t;
 
-    document.getElementById(
-        "page-content"
-    ).innerHTML = `
-        <h1>${page.title.$t}</h1>
-        ${page.content.$t}
-    `;
+   document.getElementById(
+    "page-content"
+).innerHTML = `
+    <h1>${page.title.$t}</h1> 
+    ${content}   
+`;
 }
 
 const script =
