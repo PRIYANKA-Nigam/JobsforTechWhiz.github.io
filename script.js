@@ -4,6 +4,17 @@ let allPosts = [];
 let currentPage = 1;
 const postsPerPage = 9;
 let currentCategory = "All";
+
+const urlCategory =
+new URLSearchParams(   /*added this to make post page header nav clickable */
+window.location.search
+).get("category");
+
+const urlGroup =
+new URLSearchParams(   /*added this to make post page header java nav clickable */
+window.location.search 
+).get("group");
+
 document
 .getElementById("search")
 .addEventListener("input",function(){
@@ -68,6 +79,22 @@ console.log(
       data.feed.entry.length
     );
  allPosts = data.feed.entry;
+
+ if(urlCategory){
+                       /*added this to make post page header nav clickable */
+    currentCategory =
+    decodeURIComponent(
+        urlCategory
+    );
+
+}
+
+if(urlGroup === "java"){
+
+    currentCategory = "JAVA_GROUP";
+
+}
+
 renderFeaturedPosts();
 renderSidebarCategories();
 renderCategories();renderLatestPosts();
@@ -326,20 +353,51 @@ function renderPosts(){
 
     let filteredPosts =
     allPosts;
+if(currentCategory === "JAVA_GROUP"){
 
-    if(currentCategory !== "All"){
+    filteredPosts =
+    allPosts.filter(post =>
 
-        filteredPosts =
-        allPosts.filter(post =>
+        post.category &&
+        post.category.some(cat =>
 
-            post.category &&
-            post.category.some(
-                cat => cat.term === currentCategory
-            )
+            [
+                 "Java interview Questions",
+        "Spring interview Questions",
+        "Android interview Questions"
+            ].includes(cat.term)
 
-        );
+        )
 
-    }
+    );
+
+}
+else if(currentCategory !== "All"){
+
+    filteredPosts =
+    allPosts.filter(post =>
+
+        post.category &&
+        post.category.some(
+            cat => cat.term === currentCategory
+        )
+
+    );
+
+}
+    // if(currentCategory !== "All"){
+
+    //     filteredPosts =
+    //     allPosts.filter(post =>
+
+    //         post.category &&
+    //         post.category.some(
+    //             cat => cat.term === currentCategory
+    //         )
+
+    //     );
+
+    // }
 if(searchTerm){
 
     filteredPosts =
@@ -426,6 +484,10 @@ container.innerHTML += `
     });
 
     renderPagination(filteredPosts.length);
+    console.log(
+"Filtered Posts:",
+filteredPosts.length
+);
 
 }
 function renderPagination(totalPosts){
@@ -469,6 +531,6 @@ const script =
 document.createElement("script");
 
 script.src =
-"https://interviewprepforinsiders.blogspot.com/feeds/posts/default?alt=json-in-script&max-results=35&callback=loadPosts";
+"https://interviewprepforinsiders.blogspot.com/feeds/posts/default?alt=json-in-script&max-results=500&callback=loadPosts";
 
 document.body.appendChild(script);
