@@ -233,6 +233,82 @@ function renderCategories(){
     });
 
 }
+window.showJavaGroup = function(){
+
+    currentPage = 1;
+
+    const container =
+    document.getElementById("posts-container");
+
+    container.innerHTML = "";
+
+    const filteredPosts =
+    allPosts.filter(post => {
+
+        const cat =
+        post.category?.[0]?.term;
+
+        return [
+
+            'Java interview Questions',
+
+            'Spring interview Questions',
+
+            'Android interview Questions'
+
+        ].includes(cat);
+
+    });
+
+    filteredPosts.forEach(post => {
+
+       const title = post.title.$t;
+
+       const slug = title
+       .toLowerCase()
+       .replace(/[^a-z0-9]+/g,"-")
+       .replace(/^-|-$/g,"");
+
+       const content =
+       post.content.$t
+       .replace(/<style[\s\S]*?<\/style>/gi,'')
+       .replace(/<script[\s\S]*?<\/script>/gi,'')
+       .replace(/<[^>]+>/g,'');
+
+       const summary =
+       content.substring(0,200);
+
+       let labels = "";
+
+       if(post.category){
+
+           labels = post.category
+           .map(cat =>
+             `<span class="tag">${cat.term}</span>`
+           )
+           .join("");
+       }
+
+       container.innerHTML += `
+
+       <div class="post-card">
+
+           ${labels}
+
+           <h2>${title}</h2>
+
+           <p>${summary}...</p>
+
+           <a class="read-more"
+             href="post.html?slug=${slug}">
+             Read More
+           </a>
+
+       </div>
+       `;
+    });
+
+}
 function filterCategory(category){
 
     currentCategory = category;

@@ -151,7 +151,11 @@ setTimeout(() => {
 
 }, 100);
 
-
+document
+.querySelectorAll('.img-number')
+.forEach((el,index)=>{
+    el.textContent = index + 1;
+});
 const oldHeader =
 document.querySelector(".my-top-header");
 
