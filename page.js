@@ -59,3 +59,43 @@ script.src =
 "https://interviewprepforinsiders.blogspot.com/feeds/pages/default?alt=json-in-script&max-results=500&callback=loadPage";
 
 document.body.appendChild(script);
+
+console.log("SCRIPT LOADED OK");
+
+window.showEmailBox = function(v){
+
+  console.log("clicked:", v);
+
+  const emailBox = document.getElementById("emailBox"+v);
+  const buyBtn = document.getElementById("buyBtn"+v);
+
+  if(!emailBox || !buyBtn){
+    console.error("Missing elements:", v);
+    return;
+  }
+
+  emailBox.style.display = "block";
+  buyBtn.style.display = "none";
+};
+
+
+window.submitAndPay = function(v, url){
+
+  let email = document.getElementById("buyerEmail"+v).value.trim();
+
+  let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if(!emailPattern.test(email)){
+    alert("Enter valid email");
+    return;
+  }
+
+  navigator.sendBeacon(
+    "https://docs.google.com/forms/d/e/1FAIpQLSdcPc3yb6bWTRGvhrgnxW53OiJ4EVycZK4aMLSim5R44hKMdw/formResponse",
+    new URLSearchParams({
+      "entry.733654357": email
+    })
+  );
+
+  window.location.href = url;
+};
