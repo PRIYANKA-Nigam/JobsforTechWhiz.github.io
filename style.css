@@ -250,8 +250,9 @@ header h1,
         padding-bottom:0 !important;
     }
 
-    .custom-footer{
-        margin-top:10px !important;
+     .site-footer{
+        margin-top:0 !important;
+        padding-top:0 !important;
     }
 
     .sidebar{
