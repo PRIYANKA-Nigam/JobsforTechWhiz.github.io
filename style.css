@@ -237,7 +237,31 @@ header h1,
 
     opacity:.8;
 }
+/* to remove extra space between pagination and footer */
+@media (max-width:768px){
 
+    #posts-container{
+        margin-bottom:0 !important;
+        padding-bottom:0 !important;
+    }
+
+    #pagination{                            
+        margin-bottom:5px !important;
+        padding-bottom:0 !important;
+    }
+
+    .custom-footer{
+        margin-top:10px !important;
+    }
+
+    .sidebar{
+        display:none !important;
+    }
+
+    .featured-section{
+        display:none !important;
+    }
+}
 .related-thumb{
     width:100%;
     height:150px;
@@ -1178,4 +1202,50 @@ nav{
 body.dark-mode .quiz-btn{
     background:#ff8c00;
     color:#fff !important;
+}
+
+.post-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+#quizBtn{
+    position:fixed !important;
+    top:100px !important;
+    right:20px !important;
+    background:#ff9800 !important;
+    color:#fff !important;
+    padding:10px 18px !important;
+    border-radius:6px !important;
+    text-decoration:none !important;
+    z-index:99999 !important;
+}
+html,
+body{
+    margin:0 !important;
+    padding:0 !important;  /* there was lot of widespace above quiz.html header  */
+}
+
+header{
+    margin-top:0 !important;
+}
+header{
+    position:sticky;
+    top:0;
+
+    z-index:999999 !important;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+header nav{
+    display:flex !important;
+    gap:15px;
+}
+
+header nav a{
+    display:inline-block !important;
+    color:inherit !important;
 }

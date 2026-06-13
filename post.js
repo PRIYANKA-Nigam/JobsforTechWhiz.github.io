@@ -33,7 +33,10 @@ return postSlug === slug;
     }
 
   console.log(post.link);
-
+const bloggerPostUrl =
+post.link.find(
+    l => l.rel === "alternate"
+)?.href;
 const summary =
 post.content.$t
 .replace(/<[^>]+>/g,'')
@@ -74,6 +77,11 @@ content = content.replace(
         /src="\/\//g,
         'src="https://'
     );
+    content =
+content.replace(           /*extra take quiz button removed from this */
+/<a[^>]*id=["']quizBtn["'][\s\S]*?<\/a>/gi,
+""
+);
 // content = content.replace(
 //     /<div class="my-top-header">[\s\S]*?<\/div>/i,
 //     ""
@@ -122,16 +130,30 @@ console.log("Related:", relatedPosts.length);
 console.log(relatedPosts);
     document.title =
     post.title.$t;
-
+/*
 document.getElementById(
     "post-content"
 ).innerHTML = `
     <h1>${post.title.$t}</h1>
     <div>${content}</div>
 `;
+*/
+document.getElementById(
+    "post-content"
+).innerHTML = `
+    <div class="post-header">
+        <h1>${post.title.$t}</h1>
 
+        <a
+           id="quizBtn"
+           href="quiz.html?url=${encodeURIComponent(bloggerPostUrl)}">
+           Take Quiz
+        </a>
 
+    </div>
 
+    <div>${content}</div>
+`;
 setTimeout(() => {
 
     document
@@ -152,18 +174,18 @@ setTimeout(() => {
     });
 
 }, 100);
+console.log("POST LINKS:", post.link);
 
 setTimeout(() => {
 
-    const btn =
+   const btn =
     document.getElementById("quizBtn");
 
-    if(btn){
+    if(btn && bloggerPostUrl){
 
        btn.href =
-"quiz.html?url=" +
-encodeURIComponent(bloggerPostUrl);
-
+       "quiz.html?url=" +
+       encodeURIComponent(bloggerPostUrl);
     }
 
 },500);

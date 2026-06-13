@@ -39,25 +39,21 @@ JobsForTechWhiz
 
 <nav>
 <div class="nav-left">
-<a href="#" onclick="showJavaGroup()">Java</a>
+<a href="index.html?group=java">Java</a>
 
-<a href="#"
-onclick="filterCategory('Cloud DevOps | GitOps interview questions')">
+<a href="index.html?category=Cloud%20DevOps%20%7C%20GitOps%20interview%20questions">
 Cloud DevOps
 </a>
 
-<a href="#"
-onclick="filterCategory('PHP web development Questions')">
+<a href="index.html?category=PHP%20web%20development%20Questions">
 PHP
 </a>
 
-<a href="#"
-onclick="filterCategory('Technical interview questions')">
+<a href="index.html?category=Technical%20interview%20questions">
 Technical
 </a>
 
-<a href="#"
-onclick="filterCategory('HR | Managerial interview Questions')">
+<a href="index.html?category=HR%20%7C%20Managerial%20interview%20Questions">
 HR|Managerial
 </a> </div>
 
@@ -76,15 +72,37 @@ class="buy-nav">
 </nav>
 
 </header>
-<script>
 
-btn.href =
-"page.html?slug=quiz&url=" +
-encodeURIComponent(bloggerPostUrl);
-
-    
-</script>
 <style>
+    #quizContainer,
+.quiz-wrapper,
+main{
+    width:100% !important;
+    max-width:1200px !important;
+    margin:auto !important;
+}
+.quiz-container{
+    max-width:700px;
+}
+html,
+body{
+    width:100% !important;
+    max-width:none !important;
+    margin:0 !important;
+    padding:0 !important;
+}
+
+#quiz{
+    width:100% !important;
+    max-width:none !important;
+}
+
+#quiz > *{
+    max-width:none !important;
+}
+.sidebar{
+    display:none !important;
+}
   .option{
 display:block;
 padding:8px;
@@ -318,7 +336,7 @@ margin-right:10px;
 
     font-weight:800;
 
-    color:#ff7357;
+    color:#000;
 
     text-align:center;
 
@@ -326,7 +344,21 @@ margin-right:10px;
 }
 </style>
 
+<div class="post-nav-buttons">
 
+<button
+class="nav-btn"
+onclick="history.back()">
+← Back
+</button>
+
+<a
+href="index.html"
+class="nav-btn">
+🏠 Home
+</a>
+
+</div>
 
 <h1 id="quizTitle"></h1>
 
@@ -336,24 +368,22 @@ const articleUrl =
 new URLSearchParams(location.search)
 .get("url");
 
-fetch(articleUrl)
-.then(r => r.text())
-.then(html => {
+if(articleUrl){
 
-   const doc =
-   new DOMParser()
-   .parseFromString(html,"text/html");
+    const slug =
+    articleUrl
+    .split("/")
+    .pop()
+    .replace(".html","");
 
-const title =
-doc.querySelector('h1');
+    const title =
+    slug
+    .replace(/-/g," ");
 
+    document.getElementById("quizTitle")
+    .textContent = title;
 
-  if(title){
-  document.getElementById('quizTitle').textContent =
-  title.textContent.trim();
 }
-
-});
 
 </script>
 <div id="debug">
@@ -644,15 +674,31 @@ return null;
 }
   async function fetchPost() {
 
-const feedUrl =
-'https://interviewprepforinsiders.blogspot.com/feeds/posts/default?alt=json&max-results=5000';
+ 
+  function loadFeed() {
 
-const res =
-await fetch(feedUrl);
+    return new Promise((resolve,reject)=>{
 
+        window.quizFeedCallback =
+        function(data){
+
+            resolve(data);
+
+        };
+
+        const s =
+        document.createElement("script");
+
+        s.src =
+        "https://interviewprepforinsiders.blogspot.com/feeds/posts/default?alt=json-in-script&max-results=5000&callback=quizFeedCallback";
+
+        document.body.appendChild(s);
+
+    });
+
+}
 const data =
-await res.json();
-    
+await loadFeed();
 
 const entries =
 data.feed.entry;
@@ -1348,15 +1394,6 @@ err
 
 
 
-
-alert(
-"Score : "+
-score+
-"/"+
-QUIZ.length
-);
-
-
 document
 .getElementById(
 "submitBtn"
@@ -1433,18 +1470,104 @@ if(selected){
 
 });
 
-document
-.getElementById(
-'result'
-)
-.innerHTML =
-'Score : ' +
-score +
-' / ' +
-QUIZ.length;
 
 }
 </script>
+<footer class="site-footer">
 
+    <div class="footer-content">
+
+        <h3>JobsForTechWhiz</h3>
+
+        <p>
+        Interview Preparation,
+        DevOps, Cloud,
+        Linux and Programming Resources.
+        </p>
+
+        <div class="footer-links">
+
+            <a href="index.html">
+            Home
+            </a>
+
+
+<a href="page.html?slug=about-us">
+About Us
+</a>
+
+<a href="page.html?slug=privacy-policy">
+Privacy Policy
+</a>
+
+<a href="page.html?slug=disclaimer">
+Disclaimer
+</a>
+
+<a href="page.html?slug=terms-and-conditions">
+Terms & Conditions
+</a>
+
+<a href="page.html?slug=cancellation-refund-policy">
+Refund Policy
+</a>
+
+<a href="page.html?slug=contact-us">
+Contact Us
+</a>
+ <div class="footer-right">
+<div class="footer-buy-box">
+
+<a
+href="page.html?slug=make-payment-to-buy"
+class="buy-footer-btn">
+
+🔥 Buy Interview PDFs
+
+</a>
+
+</div> </div>
+</div>
+
+       <div class="social-icons">
+
+<a
+href="https://interviewprepforinsiders.blogspot.com/p/tech-programming-and-english-tutorials.html"
+target="_blank"
+title="YouTube">
+
+
+<i class="fab fa-youtube"></i>
+
+</a>
+
+<a
+href="https://wa.me/919129520224"
+target="_blank"
+title="WhatsApp">
+
+<i class="fab fa-whatsapp"></i>
+
+</a>
+<a
+href="https://interviewprepforinsiders.blogspot.com/"
+target="_blank"
+title="Site - interviewprepforinsiders">
+
+<img src="images/IP_logo.png" alt="interviewprepforinsiders Logo" style="height: 35px;width: 35px;">
+
+</a>
+</div>
+
+        <p class="copyright">
+
+        © 2026 JobsForTechWhiz
+
+        </p>
+
+    </div>
+
+</footer>
+<script src="theme.js"></script>
 </body>
 </html>
