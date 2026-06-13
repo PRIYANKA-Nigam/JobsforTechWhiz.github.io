@@ -131,12 +131,12 @@ document.getElementById(
 `;  */
 const bloggerUrl =
 post.link.find(
-    l => l.rel === "alternate"
-).href;
-
+    l =>
+    l.href &&
+    l.href.includes("interviewprepforinsiders.blogspot.com")
+)?.href;
 const quizUrl =
-`https://interviewprepforinsiders.blogspot.com/p/quiz.html?url=${bloggerUrl}`;
-
+`https://interviewprepforinsiders.blogspot.com/p/quiz.html?url=${encodeURIComponent(bloggerUrl)}`;
 document.getElementById(
     "post-content"
 ).innerHTML = `
