@@ -32,7 +32,7 @@ return postSlug === slug;
         return;
     }
 
-  
+  console.log(post.link);
 
 const summary =
 post.content.$t
@@ -135,7 +135,7 @@ post.link.find(
 ).href;
 
 const quizUrl =
-`page.html?slug=quiz&url=${encodeURIComponent(bloggerUrl)}`;
+`https://interviewprepforinsiders.blogspot.com/p/quiz.html?url=${bloggerUrl}`;
 
 document.getElementById(
     "post-content"
