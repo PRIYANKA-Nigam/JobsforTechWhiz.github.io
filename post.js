@@ -122,47 +122,15 @@ console.log("Related:", relatedPosts.length);
 console.log(relatedPosts);
     document.title =
     post.title.$t;
-/*
+
 document.getElementById(
     "post-content"
 ).innerHTML = `
     <h1>${post.title.$t}</h1>
     <div>${content}</div>
-`;  */
-const slug =
-new URLSearchParams(
-window.location.search
-).get("slug");
-const bloggerUrl =
-post.link.find(
-    l =>
-    l.href &&
-    l.href.includes("interviewprepforinsiders.blogspot.com")
-)?.href;
-const quizUrl =
-"https://interviewprepforinsiders.blogspot.com/p/quiz.html?url=https://interviewprepforinsiders.blogspot.com/2026/05/terraform-automation-tool.html";
-document.getElementById(
-    "post-content"
-).innerHTML = `
-
-<div class="post-actions">
-
-<a
-id="quizBtn"
-class="quiz-btn"
-href="${quizUrl}"
-target="_blank">
-
-📝 Take Quiz
-
-</a>
-
-</div>
-
-<h1>${post.title.$t}</h1>
-
-<div>${content}</div>
 `;
+
+
 
 setTimeout(() => {
 
@@ -184,6 +152,21 @@ setTimeout(() => {
     });
 
 }, 100);
+
+setTimeout(() => {
+
+    const btn =
+    document.getElementById("quizBtn");
+
+    if(btn){
+
+       btn.href =
+"quiz.html?url=" +
+encodeURIComponent(bloggerPostUrl);
+
+    }
+
+},500);
 
 document
 .querySelectorAll('.img-number')

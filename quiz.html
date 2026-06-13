@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+<html>
+    <title>
+JobsForTechWhiz | Interview Questions & Tech Resources
+</title>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta
+name="description"
+content="Interview Questions, DevOps, Kubernetes, AWS, Linux, Java and technical preparation resources for job seekers.">
+<meta property="og:title"
+content="JobsForTechWhiz">
+
+<meta property="og:type"
+content="website">
+
+<meta property="og:url"
+content="https://priyanka-nigam.github.io/JobsforTechWhiz.github.io/">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="icon" href="favicon.png">
+</head>
+
+<body>
+   
+    <header>
+
+<h1>
+
+<a href="index.html">
+
+JobsForTechWhiz
+
+</a>
+
+</h1>
+
+<nav>
+<div class="nav-left">
+<a href="#" onclick="showJavaGroup()">Java</a>
+
+<a href="#"
+onclick="filterCategory('Cloud DevOps | GitOps interview questions')">
+Cloud DevOps
+</a>
+
+<a href="#"
+onclick="filterCategory('PHP web development Questions')">
+PHP
+</a>
+
+<a href="#"
+onclick="filterCategory('Technical interview questions')">
+Technical
+</a>
+
+<a href="#"
+onclick="filterCategory('HR | Managerial interview Questions')">
+HR|Managerial
+</a> </div>
+
+<div class="nav-right">
+<a href="page.html?slug=make-payment-to-buy"
+class="buy-nav">
+💳 Buy Now
+</a>
+
+ <button id="theme-toggle">
+
+🌙 Dark Mode
+
+</button></div>
+
+</nav>
+
+</header>
+<script>
+
+btn.href =
+"page.html?slug=quiz&url=" +
+encodeURIComponent(bloggerPostUrl);
+
+    
+</script>
+<style>
+  .option{
+display:block;
+padding:8px;
+margin:5px 0;
+border-radius:5px;
+}
+  .option.correct{
+border:2px solid green;
+background:#e7ffe7;
+display:block;
+padding:8px;
+margin:5px 0;
+}
+
+.option.wrong{
+border:2px solid red;
+background:#ffe7e7;
+display:block;
+padding:8px;
+margin:5px 0;
+}
+.loader{
+
+width:35px;
+height:35px;
+border:4px solid #ddd;
+border-top:4px solid #333;
+border-radius:50%;
+animation:spin 1s linear infinite;
+display:inline-block;
+
+}
+
+
+@keyframes spin{
+
+100%{
+transform:rotate(360deg);
+}
+
+}
+
+.wrong{
+border:2px solid red;
+background:#ffe7e7;
+}
+body{
+font-family:Arial;
+max-width:900px;
+margin:auto;
+padding:20px;
+}
+
+.question{
+margin-bottom:25px;
+padding:15px;
+border:1px solid #ddd;
+}
+
+button{
+padding:10px 20px;
+cursor:pointer;
+}
+
+.result{
+font-size:22px;
+font-weight:bold;
+margin-top:30px;
+}
+  /* Make quiz area wider */
+/* Full desktop width */
+/* Break Blogger width restrictions */
+.content-outer,
+.content-inner,
+.main-inner,
+.main,
+.page_body,
+.post-outer,
+.post,
+.post-body,
+.entry-content {
+
+    max-width:none !important;
+    width:100% !important;
+}
+
+body{
+    overflow-x:hidden;
+  padding-top:160px;
+}
+
+#quiz,
+#quizBox{
+
+    width:98% !important;
+
+    max-width:1600px !important;
+
+    margin:20px auto !important;
+}
+
+.question,
+.question-card{
+
+    width:100% !important;
+
+    max-width:none !important;
+}
+  
+.question p,
+.question h3{
+
+    width:100% !important;
+
+    max-width:none !important;
+
+    font-size:24px !important;
+
+    line-height:1.7 !important;
+}
+  
+
+nav,
+.navbar,
+.navigation,
+.main-nav,
+#menu{
+
+display:none !important;
+}
+
+  
+ /* Submit button styling + ripple effect */ 
+  .submit-btn{
+
+    color:#fff !important;
+
+    background:#ff7357 !important;
+
+    font-size:22px !important;
+
+    font-weight:800 !important;
+
+    letter-spacing:.5px;
+
+    text-shadow:0 1px 2px rgba(0,0,0,.3);
+
+    padding:16px 45px !important;
+
+    border:none !important;
+}
+
+.submit-btn:hover{
+
+    background:#ff5722 !important;
+}
+.submit-btn:active::after{
+
+content:"";
+
+position:absolute;
+
+width:200px;
+height:200px;
+
+left:50%;
+top:50%;
+
+background:rgba(255,255,255,.4);
+
+border-radius:50%;
+
+transform:
+translate(-50%,-50%)
+scale(0);
+
+animation:ripple .5s linear;
+
+}
+
+#submitBtn{
+    color:#fff !important;
+    background:#ff7357 !important;
+}
+
+@keyframes ripple{
+
+to{
+
+transform:
+translate(-50%,-50%)
+scale(3);
+
+opacity:0;
+
+}
+
+}
+  /* answer options need more width too */
+  .question label {
+
+display:block;
+
+padding:12px 15px;
+
+margin:8px 0;
+
+border-radius:10px;
+
+cursor:pointer;
+
+transition:.2s;
+
+}
+
+
+.question label:hover{
+
+background:#333;
+
+}
+
+
+input[type="radio"]{
+transform:scale(1.3);
+margin-right:10px;
+}
+  #quizTitle{
+    
+    font-size:34px;
+
+    font-weight:800;
+
+    color:#ff7357;
+
+    text-align:center;
+
+    margin:20px auto 35px;
+}
+</style>
+
+
+
+<h1 id="quizTitle"></h1>
+
+<script>
+
+const articleUrl =
+new URLSearchParams(location.search)
+.get("url");
+
+fetch(articleUrl)
+.then(r => r.text())
+.then(html => {
+
+   const doc =
+   new DOMParser()
+   .parseFromString(html,"text/html");
+
+const title =
+doc.querySelector('h1');
+
+
+  if(title){
+  document.getElementById('quizTitle').textContent =
+  title.textContent.trim();
+}
+
+});
+
+</script>
+<div id="debug">
+<div class="loader"></div>
+Loading quiz...
+</div>
+
+<div id="quiz"></div>
+<div id="score"></div>
+<button id="submitBtn" onclick="submitQuiz()">
+Submit Quiz
+</button>
+
+<div id="result"></div>
+<script type="module">
+
+import { initializeApp }
+from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
+
+import {
+getFirestore,
+doc,
+getDoc,
+setDoc
+}
+from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
+
+const firebaseConfig = {
+
+apiKey:"AIzaSyAOdRVwmg-Mtfvc2UennLCI-4V1VO5Nnoc",
+
+authDomain:"storequiz.firebaseapp.com",
+
+projectId:"storequiz"
+
+};
+
+const app =
+initializeApp(firebaseConfig);
+
+const db =
+getFirestore(app);
+
+window.getFirestoreQuiz =
+async function(articleKey){
+
+const ref =
+doc(
+db,
+'quizzes',
+articleKey
+);
+
+const snap =
+await getDoc(ref);
+
+if(
+snap.exists()
+){
+return snap.data();
+}
+
+return null;
+
+};
+
+  
+window.saveFirestoreQuiz =
+async function(
+articleKey,
+questions
+){
+
+
+ if(
+ !Array.isArray(questions) ||
+ questions.length === 0
+){
+
+ console.log(
+ "Blocked empty Firestore save"
+ );
+
+ return;
+}
+  await setDoc(
+doc(
+db,
+'quizzes',
+articleKey
+),
+{
+questions,
+createdAt:Date.now()
+}
+);
+
+
+console.log(
+'Firebase Ready'
+);
+}
+</script>
+<script> 
+  let userAnswers = {};
+  let quizLoading = false;
+   let QUIZ = [];window.onload = buildQuiz;
+ function selectAnswer(questionIndex, optionIndex){
+
+    userAnswers[questionIndex] = optionIndex;
+
+    console.log(
+      "Selected:",
+      questionIndex,
+      optionIndex
+    );
+
+}
+
+
+
+function submitQuiz(){
+
+let score = 0;
+
+
+QUIZ.forEach((q,index)=>{
+
+
+let selected =
+userAnswers[index];
+
+
+let correct =
+q.options.indexOf(q.answer);
+
+
+
+let inputs =
+document.querySelectorAll(
+`input[name="q${index}"]`
+);
+
+
+
+inputs.forEach(
+(input,i)=>{
+
+
+let label =
+input.parentElement;
+
+
+label.style.backgroundColor="";
+
+
+if(i === correct){
+
+label.style.backgroundColor =
+"lightgreen";
+
+}
+
+
+if(
+selected === i &&
+i !== correct
+){
+
+label.style.backgroundColor =
+"tomato";
+
+}
+
+
+});
+
+
+if(selected === correct){
+score++;
+}
+
+
+});
+
+
+console.log(
+"FINAL SCORE",
+score
+);
+
+
+document.getElementById("score")
+.innerHTML =
+"Score : "+
+score+
+"/"+
+QUIZ.length;
+
+
+}
+ 
+
+function saveLocalQuiz(
+  key,
+  questions
+){
+
+console.log(
+"Saving LocalStorage:",
+key,
+questions.length
+);
+
+localStorage.setItem(
+"quiz_" + key,
+JSON.stringify({
+questions,
+createdAt: Date.now()
+})
+);
+
+}
+  
+  function getLocalQuiz(key){
+
+const data =
+localStorage.getItem(
+"quiz_" + key
+);
+
+console.log(
+"Local lookup:",
+"quiz_" + key,
+data
+);
+
+if(!data){
+   return null;
+}
+
+return JSON.parse(data).questions;
+
+}
+
+
+  const params =
+new URLSearchParams(
+window.location.search
+);
+
+const postUrl =
+decodeURIComponent(
+params.get('url')
+);
+
+console.log(postUrl);
+  
+
+function getArticleKey(url){
+
+return url
+.split('/')
+.pop()
+.replace('.html','');
+
+}
+
+const articleKey =
+getArticleKey(postUrl);
+
+console.log(articleKey);
+  function getLocalQuiz(articleKey){
+
+const cached =
+localStorage.getItem(
+articleKey
+);
+
+if(cached){
+
+return JSON.parse(cached);
+
+}
+
+return null;
+
+}
+  async function fetchPost() {
+
+const feedUrl =
+'https://interviewprepforinsiders.blogspot.com/feeds/posts/default?alt=json&max-results=5000';
+
+const res =
+await fetch(feedUrl);
+
+const data =
+await res.json();
+    
+
+const entries =
+data.feed.entry;
+
+console.log(entries.length);
+    
+
+for(var i=0;i<entries.length;i++){
+
+   if(!entries[i].link){
+      continue;
+   }
+
+   var links =
+   entries[i].link;
+
+   for(var j=0;j<links.length;j++){
+
+      if(
+      links[j].rel === 'alternate'
+      ){
+
+         console.log(
+         links[j].href
+         );
+
+         if(
+         links[j].href === postUrl
+         ){
+
+            if(
+            !entries[i].content ||
+            !entries[i].content.$t
+            ){
+               return '';
+            }
+
+            var html =
+            entries[i].content.$t;
+
+            var div =
+            document.createElement('div');
+
+            div.innerHTML =
+            html;
+
+            var div =
+document.createElement('div');
+
+div.innerHTML = html;
+           
+
+var buttons =
+div.querySelectorAll('button');
+
+for(var i=0;i<buttons.length;i++){
+   buttons[i].remove();
+}
+/* remove styles */
+
+var styles =
+div.querySelectorAll('style');
+
+for(var i=0;i<styles.length;i++){
+   styles[i].remove();
+}
+
+
+/* remove scripts */
+
+var scripts =
+div.querySelectorAll('script');
+
+for(var i=0;i<scripts.length;i++){
+   scripts[i].remove();
+}
+
+
+/* remove links but keep text */
+
+var links =
+div.querySelectorAll('a');
+
+for(var i=0;i<links.length;i++){
+
+   links[i].replaceWith(
+      links[i].textContent
+   );
+
+}
+
+
+var article =
+div.textContent;
+
+article =
+article.replace(/\s+/g,' ')
+.trim();
+
+console.log(article);
+
+return article;
+         }
+
+      }
+
+   }
+
+}
+
+return '';
+
+}
+async function buildQuiz(){
+ if(quizLoading){
+    return;
+}
+
+quizLoading = true;
+
+quizLoading=true;
+  document.getElementById(
+"debug"
+).style.display="block";
+document.getElementById("debug").style.display="block";
+console.log("STEP 1");
+
+const article =
+await fetchPost();
+
+console.log("STEP 2", article);
+
+/*document.getElementById(
+'debug'
+).innerHTML =
+'Article Length = ' +
+article.length; */
+
+const articleKey =
+getArticleKey(postUrl);
+
+console.log("STEP 3", articleKey);
+  
+  let questions = [];
+
+ /* FIRESTORE LOOKUP */
+
+const firestoreData =
+await window.getFirestoreQuiz(
+articleKey
+);
+
+console.log("STEP 4", firestoreData);
+  if(
+firestoreData &&
+firestoreData.questions &&
+firestoreData.questions.length
+){
+
+console.log(
+'Loaded from Firestore'
+);
+
+questions =
+firestoreData.questions;
+
+/* refresh local cache */
+
+saveLocalQuiz(
+articleKey,
+questions
+);
+
+QUIZ =
+questions;
+
+renderQuiz();
+  document.getElementById(
+"debug"
+).style.display="none";
+
+/* optional background refresh */
+
+generateMoreQuestions(
+ article,
+ articleKey,
+ questions
+).catch(console.error);
+
+quizLoading=false;
+return;
+
+}
+
+
+/* LOCAL STORAGE BACKUP */
+
+questions =
+getLocalQuiz(articleKey);
+
+if(
+questions &&
+questions.length
+){
+
+console.log(
+'Loaded from Local Storage'
+);
+
+QUIZ =
+questions;
+
+renderQuiz();
+document.getElementById(
+"debug"
+).style.display="none";
+  quizLoading=false;
+return;
+
+}
+
+console.log("STEP 5", questions);
+ 
+
+/* GEMINI */
+
+console.log(
+'Generating from Gemini'
+);
+
+
+// safety: always keep array
+if(!Array.isArray(questions)){
+  questions = [];
+}
+
+
+const data =
+await generateQuiz(
+  article,
+  questions
+);
+
+
+console.log(
+"GEMINI RESPONSE",
+data
+);
+
+if(
+ !data ||
+ !Array.isArray(data.questions)
+){
+
+ console.error(
+ "Questions missing",
+ data
+ );
+
+
+ if(questions.length){
+
+   QUIZ = questions;
+   renderQuiz();
+  const loader =
+document.getElementById("debug");
+
+if(loader){
+ loader.style.display="none";
+}
+   quizLoading=false;
+   return;
+
+ }
+
+
+ QUIZ=[];
+ renderQuiz();
+ const loader =
+document.getElementById("debug");
+
+if(loader){
+ loader.style.display="none";
+}
+  quizLoading=false;
+ return;   // add this
+
+}
+
+
+
+
+// new questions from Gemini
+const newQuestions =
+data.questions;
+
+
+console.log(
+"New Gemini Questions:",
+newQuestions.length
+);
+
+
+// merge old + new
+questions = [
+   ...questions,
+   ...newQuestions
+];
+
+
+// remove duplicates
+questions =
+questions.filter(
+(q,index,self)=>
+ index ===
+ self.findIndex(
+ x =>
+ x.question === q.question
+ )
+);
+
+
+console.log(
+"TOTAL QUESTIONS:",
+questions.length
+);
+
+
+// save updated cache
+
+if(
+questions &&
+questions.length
+){
+
+await window.saveFirestoreQuiz(
+ articleKey,
+ questions
+);
+
+}
+
+
+saveLocalQuiz(
+ articleKey,
+ questions
+);
+
+
+QUIZ =
+questions;
+
+
+renderQuiz();
+  
+ const loader =
+document.getElementById("debug");
+
+if(loader){
+ loader.style.display="none";
+}
+  quizLoading=false;
+  return;
+
+
+
+
+
+}
+
+
+
+
+
+
+function renderQuiz(){
+
+const div =
+document.getElementById("quiz");
+
+div.innerHTML="";
+
+
+QUIZ.forEach((q,index)=>{
+
+let html = `
+<div 
+class="question-card"
+id="question-${index}">
+
+<p>
+${index+1}. ${q.question}
+</p>
+`;
+
+
+q.options.forEach((option,i)=>{
+
+html += `
+<label>
+<input 
+type="radio"
+name="q${index}"
+onclick="selectAnswer(${index},${i})">
+
+${option}
+
+</label><br>
+`;
+
+});
+
+
+html += "</div>";
+
+div.innerHTML += html;
+
+});
+
+
+}
+
+
+
+  
+async function generateQuiz(
+article,
+questions
+){
+
+for(
+let attempt=1;
+attempt<=3;
+attempt++
+){
+
+try{
+
+const response =
+await fetch(
+'https://generate-quiz-ten.vercel.app/api/generateQuiz',
+{
+method:'POST',
+headers:{
+'Content-Type':'application/json'
+},
+body: JSON.stringify({
+ article: article,
+ existingQuestions: questions
+})
+}
+);
+
+if(!response.ok){
+
+const errorText =
+await response.text();
+
+console.error(
+"HTTP Error:",
+response.status,
+errorText
+);
+
+throw new Error(
+errorText
+);
+
+}
+
+const text =
+await response.text();
+
+console.log(
+"API RAW RESPONSE",
+text
+);
+
+let data;
+
+try{
+
+data =
+JSON.parse(text);
+
+}catch(err){
+
+console.error(
+"Invalid JSON:",
+text
+);
+
+await new Promise(
+r=>setTimeout(r,3000)
+);
+
+continue;
+
+}
+
+if(
+Array.isArray(data.questions)
+){
+return data;
+}
+
+console.log(
+"Gemini retry",
+attempt
+);
+
+await new Promise(
+r=>setTimeout(r,3000)
+);
+
+}catch(err){
+
+console.error(
+"Request failed",
+err
+);
+
+}
+
+}
+
+return {
+questions:[]
+};
+
+}
+async function generateMoreQuestions(
+  article,
+  articleKey,
+  existingQuestions
+){
+
+try{
+
+console.log(
+"Background Gemini generation..."
+);
+console.log(
+"Existing:",
+existingQuestions.length
+);
+  if(existingQuestions.length >= 50){
+
+console.log(
+"Question limit reached"
+);
+
+return;
+
+}
+let data = null;
+
+for(let i=0;i<3;i++){
+
+try{
+
+data =
+await generateQuiz(
+  article,
+  existingQuestions
+);
+
+if(
+  data &&
+  Array.isArray(data.questions) &&
+  data.questions.length > 0
+){
+  break;
+}
+
+}catch(e){
+
+console.log(
+"Background retry",
+i + 1
+);
+
+await new Promise(
+r => setTimeout(r,3000)
+);
+
+}
+
+}
+
+if(
+ !data ||
+ !Array.isArray(data.questions) ||
+ data.questions.length === 0
+){
+
+ console.log(
+ "No new questions generated"
+ );
+
+ return;
+
+}
+
+console.log(
+"New questions received:",
+data.questions.length
+);
+
+let allQuestions = [
+
+  ...existingQuestions,
+
+  ...data.questions
+
+];
+
+allQuestions =
+allQuestions.filter(
+(q,index,self)=>
+
+index ===
+
+self.findIndex(
+x =>
+x.question === q.question
+)
+
+);
+
+console.log(
+"Updated total:",
+allQuestions.length
+);
+
+  if(
+allQuestions.length <=
+existingQuestions.length
+){
+
+console.log(
+"No new questions. Skip save."
+);
+
+return;
+
+}
+  
+await window.saveFirestoreQuiz(
+  articleKey,
+  allQuestions
+);
+
+saveLocalQuiz(
+  articleKey,
+  allQuestions
+);
+
+QUIZ = allQuestions;
+  console.log(
+"QUIZ LENGTH AFTER UPDATE",
+QUIZ.length
+);
+
+renderQuiz();
+
+const debug =
+document.getElementById(
+"debug"
+);
+
+if(debug){
+  debug.style.display = "none";
+}
+
+console.log(
+"Background cache updated"
+);
+
+}
+catch(err){
+
+console.error(
+"Background generation failed",
+err
+);
+
+}
+
+}
+  </script>
+  <script>
+
+
+
+
+alert(
+"Score : "+
+score+
+"/"+
+QUIZ.length
+);
+
+
+document
+.getElementById(
+"submitBtn"
+)
+.addEventListener(
+"click",
+checkQuiz
+);
+
+function checkQuiz(){
+
+let score = 0;
+
+QUIZ.forEach(
+(q,index)=>{
+
+if(q.type==="fib"){
+
+const value =
+
+document
+.getElementById(
+'q' + index
+)
+.value
+.trim();
+
+if(
+value.toLowerCase()
+===
+q.answer.toLowerCase()
+){
+score++;
+}
+
+}
+
+if(q.type==="tf"){
+
+const selected =
+
+document.querySelector(
+'input[name=q' +
+index +
+']:checked'
+);
+
+if(
+selected &&
+selected.value==="true"
+){
+score++;
+}
+
+}
+
+if(q.type==="mcq"){
+
+const selected =
+
+document.querySelector(
+'input[name=q' +
+index +
+']:checked'
+);
+
+if(selected){
+   if(selected.value === q.answer){
+      score++;
+   }
+}
+
+}
+
+});
+
+document
+.getElementById(
+'result'
+)
+.innerHTML =
+'Score : ' +
+score +
+' / ' +
+QUIZ.length;
+
+}
+</script>
+
+</body>
+</html>
