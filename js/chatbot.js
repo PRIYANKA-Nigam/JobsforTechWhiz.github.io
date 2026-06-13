@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
             `<div class="user-msg">${msg}</div>`;
 
         input.value = "";
-
+/*
         fetch(CHAT_API, {
 
             method: "POST",
@@ -80,8 +80,37 @@ console.log("Response:", data);
             messages.innerHTML +=
                 `<div class="bot-msg">Service unavailable.</div>`;
 
-        });
+        }); */
 
+       $.ajax({
+
+  url: CHAT_API,
+
+  type: "POST",
+
+  data: {
+    message: msg
+  },
+
+  success: function(data){
+
+      messages.innerHTML +=
+      `<div class="bot-msg">
+        ${data.reply}
+      </div>`;
+
+  },
+
+  error: function(){
+
+      messages.innerHTML +=
+      `<div class="bot-msg">
+        Service unavailable.
+      </div>`;
+
+  }
+
+});
     }
 
 });
