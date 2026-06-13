@@ -33,7 +33,7 @@ Loading...
 </div>
 
 </div>
-
+<div id="chatbot-container"></div>
 <footer>
 
 <!-- same footer -->
@@ -41,10 +41,71 @@ Loading...
 </footer>
 
 <script src="page.js"></script>
+<div id="jftw-chat-btn">
+💬
+</div>
 
+<div id="jftw-chat-window">
 
+<div
+style="
+padding:15px;
+background:#ff9800;
+color:white;
+font-weight:bold;
+">
+JobsForTechWhiz Assistant
+</div>
+
+<div id="jftw-messages">
+</div>
+
+<div
+style="
+display:flex;
+padding:10px;
+border-top:1px solid #eee;
+">
+
+<input
+id="jftw-input"
+placeholder="Ask a question..."
+style="
+flex:1;
+padding:10px;
+">
+
+<button
+id="jftw-send">
+Send
+</button>
+
+</div>
+
+</div>
+<link
+rel="stylesheet"
+href="css/chatbot.css">
+
+<script
+src="js/chatbot.js">
+</script>
+<!--
+<script>
+fetch("widget.html")
+.then(r => r.text())
+.then(html => {
+
+  document
+  .getElementById(
+    "chatbot-container"
+  )
+  .innerHTML = html;
+
+});
+</script>
  
-
+-->
 
 </body>
 </html>
