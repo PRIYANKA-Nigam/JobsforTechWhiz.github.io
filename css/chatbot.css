@@ -2,7 +2,7 @@
 
 position:fixed;
 bottom:20px;
-right:20px;
+ right:15px !important;
 
 width:65px;
 height:65px;
@@ -27,7 +27,26 @@ box-shadow:
 z-index:999999;
 
 }
+@media (max-width:768px){
 
+    #jftw-chat-btn{
+        right:12px !important;
+        bottom:15px !important;
+    }
+
+}
+.chat-header{
+    background-color: #111;
+    color: #f3f3f3;
+    margin-top: auto;
+    justify-content: flex-start;
+}
+#jftw-input{
+    margin-left: 2px;
+    max-width: fit-content;
+    width: auto;
+    
+}
 #jftw-chat-window{
  flex-direction:column;
 position:fixed;
