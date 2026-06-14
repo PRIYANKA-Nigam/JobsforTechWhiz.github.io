@@ -691,6 +691,13 @@ height:calc(100vh - 40px) !important;
   .site-footer{
     margin-top:0 !important;
   }
+  #pagination{
+  border:3px solid red !important;
+}
+
+.site-footer{
+  border:3px solid blue !important;
+}
 }
 #post-content{
    display:block !important;
