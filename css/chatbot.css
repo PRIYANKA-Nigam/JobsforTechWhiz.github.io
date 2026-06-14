@@ -2,7 +2,7 @@
 
 position:fixed;
 bottom:20px;
- right:25px !important;
+ right:5px !important;
 
 width:65px;
 height:65px;
@@ -27,20 +27,12 @@ box-shadow:
 z-index:999999;
 
 }
-@media (max-width:768px){
 
-    #jftw-chat-btn{
-        right:12px !important;
-        bottom:15px !important;
-    }
-
-}
 .chat-header{
     background-color: #111;
     color: #f3f3f3;
     margin-top: auto;
     justify-content: flex-start;
-    line-height: 20px;
     font-size: medium;
     font-weight: 100;
     text-shadow: #ff9800;
@@ -154,5 +146,21 @@ transition:.3s;
 background:#ffb300;
 
 transform:translateY(-2px);
+
+}
+
+@media(max-width:768px){
+
+  #jftw-chat-btn{
+      right:12px !important;
+      left:auto !important;
+      transform:none !important;
+  }
+
+  #jftw-chat-window{
+      right:10px !important;
+      left:auto !important;
+      max-width:calc(100vw - 20px) !important;
+  }
 
 }
