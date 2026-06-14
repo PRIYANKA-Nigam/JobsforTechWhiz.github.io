@@ -502,26 +502,7 @@ text-decoration:none;
 .dark .related-section{
     background:#1f2937;
 }
-@media (max-width:768px){
 
-    .custom-layout,
-    #post-content > div{
-        display:block !important;
-    }
-
-    .sidebar{
-        display:none !important;
-        width:0 !important;
-        min-width:0 !important;
-        margin:0 !important;
-        padding:0 !important;
-    }
-
-    .main{
-        width:100% !important;
-        max-width:100% !important;
-    }
-}
 .full-card{
 width:100%;
 max-width:100%;
@@ -671,7 +652,46 @@ height:calc(100vh - 40px) !important;
 .main section{
     max-width:100%;
 }
+@media (max-width:768px){
 
+  .custom-layout{
+    display:block !important;
+   min-height:auto !important;
+    height:auto !important;
+    align-items:flex-start !important;
+  }
+ .sidebar{
+    display:none !important;
+    height:auto !important;
+    min-height:0 !important;
+  }
+
+
+  .sidebar,
+  .sidebar-wrapper,
+  .right-sidebar{
+    display:none !important;
+    min-height:0 !important;
+    overflow:hidden !important;
+    margin:0 !important;
+    padding:0 !important;
+  }
+
+  .main{
+    width:100% !important;
+    max-width:100% !important;
+    margin-bottom:0 !important;
+  }
+
+  #pagination{
+    margin-bottom:0 !important;
+    padding-bottom:0 !important;
+  }
+
+  .site-footer{
+    margin-top:0 !important;
+  }
+}
 #post-content{
    display:block !important;
     gap:20px;
