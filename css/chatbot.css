@@ -100,3 +100,35 @@ font-weight:500;
 line-height:1.5;
 
 }
+.chat-payment-link{
+
+display:inline-block;
+
+margin-top:8px;
+
+padding:10px 16px;
+
+background:#ff9800;
+
+color:#fff !important;
+
+font-weight:600;
+
+text-decoration:none;
+
+border-radius:8px;
+
+box-shadow:
+0 3px 10px rgba(255,152,0,.35);
+
+transition:.3s;
+
+}
+
+.chat-payment-link:hover{
+
+background:#ffb300;
+
+transform:translateY(-2px);
+
+}
