@@ -427,7 +427,7 @@ font-weight:600;
 opacity:.9;
 }
 .dark .post-card h2,
-.dark .sidebar h3,
+.dark .home-sidebar h3,
 .dark .featured-card a,
 .dark .latest-link a{
     color:white !important;
@@ -495,7 +495,7 @@ color:white;
 
 }
 
-.dark .sidebar{
+.dark .home-sidebar{
 
 background:#1f2937;
 
@@ -588,7 +588,7 @@ align-items:start;
 
 }
 
-.sidebar{
+.home-sidebar{
 
 background:white;
 
@@ -603,7 +603,7 @@ position:sticky;
 top:20px;
 
 }
-.sidebar h3{
+.home-sidebar h3{
 
 border-bottom:2px solid #2563eb;
 
@@ -612,7 +612,7 @@ padding-bottom:8px;
 margin-top:25px;
 
 }
-.sidebar a{
+.home-sidebar a{
 
 display:block;
 
@@ -622,6 +622,50 @@ text-decoration:none;
 
 }
 
+.sidebar{
+
+    background:#1f2a3d;
+
+    padding:20px;
+
+    border-radius:12px;
+
+    position:sticky;
+
+    top:20px;
+
+    height:max-content;
+}
+
+.sidebar h2{
+    border-bottom:none;
+    padding-bottom:10px;
+    margin:0 0 15px;
+}
+
+.sidebar ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.sidebar li{
+    margin-bottom:10px !important;
+    line-height:1.4 !important;
+}
+
+.sidebar a{
+
+    display:block !important;
+
+    padding:4px 0 !important;
+
+    text-decoration:none !important;
+
+    border-bottom:none !important;
+
+    line-height:1.4 !important;
+}
 .related-section{
     background:#f8fafc;
     padding:20px;
@@ -1445,4 +1489,70 @@ margin-top:10px;
 font-weight:700;
 font-size:18px;
 
+}
+
+html,
+body{
+    margin:0 !important;
+    padding:0 !important;
+}
+
+footer{
+    margin-bottom:0 !important;
+    padding-bottom:10px !important;
+}
+
+body{
+    overflow-x:hidden;
+}
+#chat-widget,
+.chatbot-container{
+
+    position:fixed !important;
+
+    right:20px !important;
+
+    bottom:120px !important;
+}
+/* Move chatbot upward */
+#jftw-chat-btn{
+    position:fixed !important;
+    right:20px !important;
+    bottom:120px !important;
+    z-index:99999 !important;
+}
+
+/* Prevent extra gap after pagination */
+.pagination,
+#pagination{
+    margin-bottom:0 !important;
+    padding-bottom:0 !important;
+}
+
+/* Tight footer */
+footer{
+    margin-top:10px !important;
+    margin-bottom:0 !important;
+    padding-bottom:0 !important;
+}
+
+body{
+    margin-bottom:0 !important;
+    padding-bottom:0 !important;
+}
+#jftw-chat-btn{
+    position:fixed !important;
+
+    width:60px !important;
+    height:60px !important;
+
+    left:auto !important;
+    top:auto !important;
+
+    right:20px !important;
+
+    /* move above footer */
+    bottom:120px !important;
+
+    z-index:999999 !important;
 }
