@@ -105,39 +105,31 @@ function initChatbot() {
 }
 if(data.reply === "__FOCUS_SEARCH__"){
 
-    const search = document.getElementById("search");
+    const search =
+    document.getElementById("search");
 
-if(search){
+    console.log(search);
+console.log("Highlighting search");
+    if(search){
 
-    search.scrollIntoView({
-        behavior: "smooth",
-        block: "center"
-    });
+        search.scrollIntoView({
+            behavior:"smooth",
+            block:"center"
+        });
 
-    search.focus();
-
-    search.style.boxShadow =
-      "0 0 0 4px rgba(255,152,0,.5)";
-
-    search.style.border =
-      "2px solid #ff9800";
- search.classList.add(
-        "search-highlight"
-    );
-
-    setTimeout(() => {
-
-        search.classList.remove(
+        search.classList.add(
             "search-highlight"
         );
 
-    }, 3000);
-    setTimeout(() => {
+        setTimeout(function(){
 
-        search.style.boxShadow = "";
-        search.style.border = "";
+            search.classList.remove(
+                "search-highlight"
+            );
 
-    }, 3000);
+        },3000);
 
-}
+    }
+
+    return;
 }
