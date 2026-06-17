@@ -1662,3 +1662,39 @@ body{
 .site-footer{
     margin-top:auto;
 }
+@media (max-width:768px){
+
+    #jftw-chat-btn{
+        bottom:120px !important;
+        right:15px !important;
+    }
+
+    #jftw-chat-window{
+        bottom:180px !important;
+    }
+
+}
+
+.site-footer{
+    padding:15px 10px !important;
+}
+
+.footer-links{
+    margin:10px 0 !important;
+}
+
+.footer-links a{
+    margin:0 6px !important;
+}
+
+.footer-help-container{
+    margin-top:10px !important;
+}
+
+#jftw-chat-btn{
+    bottom:120px !important;
+}
+
+#jftw-chat-window{
+    bottom:180px !important;
+}
