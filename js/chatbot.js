@@ -103,3 +103,26 @@ function initChatbot() {
     }
 
 }
+if(data.reply === "__FOCUS_SEARCH__"){
+
+    const search =
+    document.getElementById("search");
+
+    if(search){
+
+        search.focus();
+
+        window.scrollTo({
+            top:0,
+            behavior:"smooth"
+        });
+
+    }
+
+    messages.innerHTML +=
+    `<div class="bot-msg">
+      🔍 Please use the search bar at the top of the page.
+    </div>`;
+
+    return;
+}

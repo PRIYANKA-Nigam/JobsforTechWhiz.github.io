@@ -9,9 +9,8 @@
 ],
 
 "answer":
-"Payments can be made online using the payment options available on the website.To purchase interview PDFs,<br> <a href='https://priyanka-nigam.github.io/JobsforTechWhiz.github.io/page.html?slug=make-payment-to-buy' target='_blank' class='chat-payment-link'>Click Here to Make Payment</a><br>U can buy directly from this page "
-},
-
+"Payments can be made online using the payment options available on the website.To purchase interview PDFs,<br> <a href=\"page.html?slug=make-payment-to-buy\" class=\"buy-footer-btn\"> 🔥 Buy English PDFs </a><br><br><a href=\"page.html?slug=pdf-store\" class=\"pdf-store-btn\"> 📚 PDF Programming PDFs 🔥</a>"
+  },
 {
 "keywords":[
 "download",
@@ -42,13 +41,16 @@
 
 {
 "keywords":[
-"android"
+"android","php","git","unix","cloud","hr","interview","app development","devOps","serverless","elastic search","RAG pipeline"
 ],
 
-"answer":
-"We provide Android interview preparation resources."
+"answer":"We provide domain-specific course kit for interview preparation.<br><br>🔍 For any technical query, use the Search Bar available at the top of this page. Enter keywords like Java, Spring Boot, Android, AI, Cloud, Interview Questions, etc.<br><br>📚 For advanced-level topics, visit: <a href=\"https://technologytalents.blogspot.com/\" target=\"_blank\" class=\"chat-payment-link\">Tech Blogs</a>"
 },
 
+{
+  "keywords":["search","find topic"],
+  "answer":"__FOCUS_SEARCH__"
+},
 {
 "keywords":[
 "contact",
@@ -62,9 +64,9 @@
 {
   "keywords": [
     "email",
-    "contact email"
+    "contact email","customer support"
   ],
-  "answer": "Please use the contact details provided on the website."
+  "answer": "Please use the contact details provided on the website.For email support click here  Please use the contact details provided on the website.<br><br><a class=\"email-support-btn\" href=\"mailto:pnigam342@gmail.com?subject=Contact Support\" target=\"_blank\"><i class=\"fas fa-envelope\"></i> Email Support</a>"
 },
 {
   "keywords": [
@@ -77,7 +79,7 @@
 {
   "keywords": [
     "site",
-    "content","info","topics","technical","programming","coding","english","verbal","website"
+    "content","info","topics","technical","programming","coding","english","verbal","website","available"
   ],
   "answer": "This site includes basic to advanced technical content on Programming, AI, Cloud, and job-related topics.<br><br>We also provide premium learning resources and live mentoring sessions.<br><br><a href='/JobsforTechWhiz.github.io/page.html?slug=book-a-tutor' target='_blank' class='chat-payment-link'>📚 Book a Live Class</a>"
 }
