@@ -1,295 +1,837 @@
-<!DOCTYPE html>
-<html>
-    <title>
-JobsForTechWhiz | Interview Questions & Tech Resources
-</title>
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta
-name="description"
-content="Interview Questions, DevOps, Kubernetes, AWS, Linux, Java and technical preparation resources for job seekers.">
-<meta property="og:title"
-content="JobsForTechWhiz">
+<style>
+.labels-section{
+width:100% !important;
+max-width:none !important;
+}
 
-<meta property="og:type"
-content="website">
+.circle-links{
+width:100% !important;
+max-width:none !important;
+}
 
-<meta property="og:url"
-content="https://priyanka-nigam.github.io/JobsforTechWhiz.github.io/">
+.topic-grid{
+
+display:grid !important;
+
+grid-template-columns:
+repeat(3,140px) !important;
+
+justify-content:center !important;
+
+column-gap:-20px !important;
+row-gap:-20px !important;
+
+width:100% !important;
+
+}
+.topic-circle{
+
+border-radius:50%;
+width:140px !important;
+height:140px !important;
+
+flex-shrink:0;
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-size:24px;
+font-weight:700;
+
+margin:-18px !important;
+
+position:relative;
+z-index:2;
+
+}
+.circle-links,
+.labels-section{
+
+padding:0 !important;
+margin:0 !important;
+
+}
+.topic-circle:hover{
+
+    transform:
+    scale(1.08);
+
+    box-shadow:
+    0 15px 40px
+    rgba(33,150,243,.65);
+
+}
+.topic-circle,
+.circle-links a{
+
+    width: 140px;
+    height: 140px;
+
+    font-size:30px;
+}
+@media(max-width:768px){
+
+    .topic-grid{
+        grid-template-columns:1fr;
+    }
+
+    .topic-circle,
+    .circle-links a{
+
+        width:140px;
+        height: 140px;
+
+        margin:auto;
+    }
+}
+.topic-circle:nth-child(2),
+.topic-circle:nth-child(5){
+transform:translateX(-25px);
+}
+
+.topic-circle:nth-child(3),
+.topic-circle:nth-child(6){
+transform:translateX(-50px);
+}
+  .hero-content{
+
+display:grid;
+
+grid-template-columns:
+1.2fr 1fr;
+
+gap:40px;
+
+align-items:stretch;
+}
+
+.tech-section{
+
+height:100%;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+.hero-btn{
+margin : 5px 5px;
+background:#ff6a00;
+
+color:white;
+
+padding:16px 32px;
+
+font-size:20px;
+
+font-weight:700;
+
+border-radius:12px;
+
+display:inline-block;
+
+text-decoration:none;
+
+box-shadow:
+0 8px 25px
+rgba(25,118,210,.35);
+
+transition:.3s;
+}
+
+.hero-btn:hover{
+
+transform:translateY(-4px);
+
+box-shadow:
+0 10px 35px
+rgba(25,118,210,.55);
+
+}
+  
+  :root{
+
+--primary:#ff6a00;
+--primary-dark:#e65100;
+
+--green:#00c853;
+
+--dark:#222;
+
+--light:#f8f9fa;
+
+}
+.stats{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    margin:40px 0;
+}
+
+.stat{
+    background:#fff;
+    padding:20px 30px;
+    border-radius:15px;
+    min-width:180px;
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,.1);
+
+    text-align:center;
+
+    transition:.3s;
+}
+
+.stat:hover{
+    transform:translateY(-5px);
+}
+
+.stat h3{
+    color:#1976d2;
+    font-size:32px;
+    margin:0;
+}
+
+.stat p{
+    margin-top:8px;
+    font-weight:600;
+}
+.circle-links a{
+width: 140px;
+    height: 140px;
+
+    border-radius:50%;
+
+    background:
+    linear-gradient(
+    135deg,
+    #1976d2,
+    #2196f3
+    );
+
+    color:white;
+
+    text-decoration:none;
+
+box-shadow:
+0 0 20px
+rgba(255,106,0,.45);
+
+font-size:18px;
+font-weight:700;
+
+}
+
+.circle-links a:hover{
+
+transform:
+translateY(-6px)
+scale(1.08);
+
+}
+.hero{
+text-align:center;
+padding:50px 20px;
+background:
+linear-gradient(
+135deg,
+#1976d2,
+#2196f3
+);
+color:#fff;
+}
+nav a{
+margin-right:40px;
+}
+nav{
+    display:flex !important;
+
+    justify-content:center !important;
+
+    gap:12px !important;
+
+    padding:10px 0 !important;
+}
+
+nav a{
+    margin:0 !important;
+
+    padding:8px 16px !important;
+}
+nav .nav-left{
+
+display:flex !important;
+
+gap:10px !important;
+
+justify-content:center !important;
+}
+
+nav .nav-left a{
+
+width:auto !important;
+
+margin:0 !important;
+
+padding:8px 14px !important;
+
+display:inline-block !important;
+}
+.navbars{
+display:flex;
+justify-content:center;
+gap:20px;
+padding:15px;
+background:#222;
+flex-wrap:wrap;
+}
+
+.navbars a{
+color:white;
+text-decoration:none;
+font-weight:700;
+}
+
+.quote-section{
+text-align:center;
+padding:25px;
+font-style:italic;
+background:#fff5ec;
+z-index:1;
+}
+
+.content-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+padding:40px;
+}
+
+.youtube-section iframe{
+width:100%;
+height:350px;
+border-radius:16px;
+}
+
+.circle-links{
+width:100%;
+}
+
+.topic-grid{
+
+display:grid !important;
+
+grid-template-columns:
+repeat(3, 1fr);
+
+gap:0 !important;
+
+max-width:900px;
+
+margin:auto;
+justify-items:center;
+
+}
+
+
+.circle-links a{
+width:120px;
+height:120px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+text-decoration:none;
+font-weight:bold;
+background:
+linear-gradient(
+135deg,
+#1976d2,
+#2196f3
+);
+color:#fff;
+transition:.4s;
+box-shadow:0 0 15px rgba(255,106,0,.4);
+}
+
+.circle-links a:hover{
+transform:scale(1.08);
+}
+
+.pdf-section{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+padding:40px;
+}
+
+.pdf-card{
+padding:30px;
+border-radius:20px;
+text-align:center;
+background:linear-gradient(135deg,#00c853,#64dd17);
+color:white;
+box-shadow:0 8px 25px rgba(0,0,0,.15);
+}
+.buy-btn{
+
+background:
+linear-gradient(
+45deg,
+#00ff66,
+#00c853
+);
+
+padding:16px 28px;
+
+font-size:18px;
+font-weight:700;
+
+border-radius:50px;
+
+animation:pulse 2s infinite;
+
+}
+.buy-btn,
+.channel-btn{
+display:inline-block;
+margin-top:15px;
+padding:14px 24px;
+background:#ff6a00;
+color:white;
+text-decoration:none;
+border-radius:50px;
+font-weight:bold;
+animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+
+0%{transform:scale(1);}
+50%{transform:scale(1.05);}
+100%{transform:scale(1);}
+
+}
+
+footer{
+background:#111;
+color:#fff;
+text-align:center;
+padding:25px;
+}
+
+@media(max-width:768px){
+
+.content-grid,
+.pdf-section{
+grid-template-columns:1fr;
+}
+
+.circle-links a{
+width:90px;
+height:90px;
+font-size:14px;
+}
+
+}
+
+#buyDialog{
+    display:none;
+
+    position:fixed;
+    inset:0;
+
+    background:rgba(0,0,0,.65);
+
+    z-index:99999;
+}
+
+.buy-box{
+    width:400px;
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    text-align:center;
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    transform:
+    translate(-50%,-50%);
+}
+.thought-box{
+
+background:
+linear-gradient(
+135deg,
+#1565c0,
+#42a5f5
+);
+
+color:white;
+
+padding:35px;
+
+border-radius:20px;
+
+font-size:20px;
+
+line-height:1.8;
+
+font-weight:500;
+
+margin:40px 0;
+}
+.explore-zone{
+
+position:relative;
+overflow: hidden;
+background:
+linear-gradient(
+135deg,
+#1565c0,
+#2196f3
+);
+
+color:white;
+
+text-align:center;
+
+padding:70px 20px;
+
+margin-top:-10px;
+
+}
+.explore-zone::before{
+
+content:"";
+
+position:absolute;
+
+top:-120px;
+left:-10%;
+
+width:120%;
+height:140px;
+
+background:white;
+
+border-radius:
+0 0 50% 50%;
+
+}
+.explore-zone::after{
+
+content:"";
+
+position:absolute;
+
+bottom:-25px;
+
+left:0;
+
+width:100%;
+height:30px;
+
+background:
+linear-gradient(
+-45deg,
+transparent 75%,
+rgba(0,0,0,.15) 75%
+);
+
+background-size:
+30px 30px;
+}
+.explore-btn{
+
+display:inline-block;
+
+margin-top:20px;
+
+background:white;
+
+color:#1565c0;
+
+
+padding:15px 30px;
+
+font-weight:700;
+
+border-radius:40px;
+
+text-decoration:none;
+
+box-shadow:
+0 8px 25px
+rgba(0,0,0,.25);
+
+transition:.3s;
+}
+
+.explore-btn:hover{
+
+transform:
+translateY(-5px)
+scale(1.05);
+
+}
+#jftw-chat-btn,
+#jftw-chat-window{
+position:fixed !important;
+z-index:2147483647 !important;
+}
+
+.quote-section,
+.hero,
+.stats,
+.tech-section,
+.buy-section,
+footer{
+z-index:auto !important;
+}
+#jftw-chat-btn{
+position:fixed !important;
+bottom:20px !important;
+right:20px !important;
+
+width:65px !important;
+height:65px !important;
+
+display:flex !important;
+align-items:center !important;
+justify-content:center !important;
+
+background:#ff9800 !important;
+color:#fff !important;
+
+border-radius:50% !important;
+
+cursor:pointer !important;
+
+z-index:99999999 !important;
+}
+
+#jftw-chat-window{
+position:fixed !important;
+bottom:100px !important;
+right:20px !important;
+
+z-index:99999999 !important;
+}
+</style>>
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<link rel="icon" href="favicon.png">
-<script src="js/book-tutor.js"></script>
-</head>
+<header class="hero">
 
-<body>
-   
-    <header>
-
-<h1>
-
-<a href="index.html">
-
-JobsForTechWhiz
-
+<h1>TechnicalMindSpace</h1>
+<a class="hero-btn" href="blogs.html">
+📚 Explore 500+ Interview Questions
 </a>
-
-</h1>
-
-<nav>
-<div class="nav-left">
-<a href="#" onclick="showJavaGroup()">Java</a>
-
-<a href="#"
-onclick="filterCategory('Cloud DevOps | GitOps interview questions')">
-Cloud DevOps
-</a>
-
-<a href="#"
-onclick="filterCategory('PHP web development Questions')">
-PHP
-</a>
-
-<a href="#"
-onclick="filterCategory('Technical interview questions')">
-Technical
-</a>
-
-<a href="#"
-onclick="filterCategory('HR | Managerial interview Questions')">
-HR|Managerial
-</a>
-<a href="page.html?slug=book-a-tutor">
-  Book Classes
-</a>
-</div>
-
-<div class="nav-right">
-<a href="#"
-   class="buy-nav"
-   onclick="openBuyDialog();return false;">
-   💳 Buy Now
-</a>
-
- <button id="theme-toggle">
-
-🌙 Dark Mode
-
-</button></div>
-
-</nav>
+<p>
+Learn Programming, Cloud, DevOps, English Communication,
+Interview Preparation & Career Skills
+</p>
 
 </header>
 
-<input
-id="search"
-placeholder="Search posts...">
+<nav class="navbars">
 
-<div id="category-filters"></div>
+<a href="index.html">Home</a>
 
-<div class="page-layout">
+<a href="blogs.html">Blogs</a>
 
-<div class="main-content">
+<a href="#" id="buyBtn">Buy</a>
 
-<div id="posts-container">
+<a href="page.html?slug=contact-us">Contact</a>
 
-Loading Posts...
+<a href="page.html?slug=book-a-tutor">Book Tutor</a>
 
-</div>
+<a href="page.html?slug=about-us">About</a>
 
-<div id="pagination"></div>
+</nav>
+<section class="explore-zone">
 
-</div>
+<h2>
+Explore Articles
+</h2>
 
-<aside class="home-sidebar">
-
-<h3>Featured Posts</h3>
-<div id="featured-posts"></div>
-
-<h3>Categories</h3>
-<div id="sidebar-categories"></div>
-
-<h3>Latest Posts</h3>
-<div id="latest-posts"></div>
-
-</aside>
-
-</div>
-<!-- <div id="category-filters"></div>
-
-<div id="posts-container"></div>
-
-<div id="pagination"></div>
-<div id="posts-container"> -->
-
-Loading Posts...
-
-</div>
-
-<script src="script.js"></script>
-
-
-<div id="chatbot-container"></div>
-
-<link
-rel="stylesheet"
-href="/JobsforTechWhiz.github.io/css/chatbot.css">
-<script src="/JobsforTechWhiz.github.io/js/chatbot.js"></script> 
-<script>
-fetch('/JobsforTechWhiz.github.io/widget.html')
-.then(r => {
-    console.log("status:", r.status);
-    return r.text();
-}) 
-.then(html => {
-
-    console.log("widget loaded");
-
-    document.getElementById(
-        'chatbot-container'
-    ).innerHTML = html;
-
-    console.log(
-        document.getElementById(
-            'jftw-chat-btn'
-        )
-    );
-
-    initChatbot();
-
-})
-.catch(err => {
-    console.error(err);
-});
-</script>
-
-
-<!--
-<div id="jftw-chat-btn">
-💬
-</div>
-
-<div id="jftw-chat-window">
-
-<div
-style="
-padding:15px;
-background:#ff9800;
-color:white;
-font-weight:bold;
-">
-JobsForTechWhiz Assistant
-</div>
-
-<div id="jftw-messages">
-</div>
-
-<div
-style="
-display:flex;
-padding:10px;
-border-top:1px solid #eee;
-">
-
-<input
-id="jftw-input"
-placeholder="Ask a question..."
-style="
-flex:1;
-padding:10px;
-">
-
-<button
-id="jftw-send">
-Send
-</button>
-
-</div>
-
-</div>
-<link
-rel="stylesheet"
-href="css/chatbot.css">
-
-<script
-src="js/chatbot.js">
-</script>
-
-<script>
-fetch("widget.html")
-.then(r => r.text())
-.then(html => {
-
-  document
-  .getElementById(
-    "chatbot-container"
-  )
-  .innerHTML = html;
-
-});
-</script> -->
-<footer class="site-footer">
-
-    <div class="footer-content">
-
-        <h3>JobsForTechWhiz</h3>
-
-        <p>
-        Interview Preparation,
-        DevOps, Cloud,
-        Linux and Programming Resources.
-        </p>
-
-        <div class="footer-links">
-
-            <a href="index.html">
-            Home
-            </a>
-
-
-<a href="page.html?slug=about-us">
-About Us
-</a>
-
-<a href="page.html?slug=privacy-policy">
-Privacy Policy
-</a>
-
-<a href="page.html?slug=disclaimer">
-Disclaimer
-</a>
-
-<a href="page.html?slug=terms-and-conditions">
-Terms & Conditions
-</a>
-
-<a href="page.html?slug=cancellation-refund-policy">
-Refund Policy
-</a>
-
-<a href="page.html?slug=contact-us">
-Contact Us
-</a>
- <div class="footer-right">
-<div class="footer-buy-box">
+<p>
+500+ Interview Questions,
+Tutorials,
+PDF Notes,
+Career Guides
+</p>
 
 <a
-href="page.html?slug=make-payment-to-buy"
-class="buy-footer-btn">
+href="blogs.html"
+class="explore-btn">
 
-🔥 Buy English PDFs
+Explore Articles
 
 </a>
-<br><br>
 
-<a href="page.html?slug=pdf-store"
-   class="pdf-store-btn">
-    📚 PDF Programming PDFs 🔥
-</a>
-</div> </div>
+</section>
+<section class="quote-section">
+
+<h2>💡 Thought of the Day</h2>
+
+<p>
+
+Mastering technology is not about learning one language,
+one framework, or one tool.
+
+It is about developing the ability to learn continuously,
+adapt quickly, solve problems creatively,
+and stay curious throughout your career.
+
+Every interview question solved today becomes confidence tomorrow.
+Every project completed today becomes experience tomorrow.
+
+Small daily improvements create extraordinary careers.
+
+</p>
+
+</section>
+<section>
+<div class="stats">
+
+<div class="stat">
+
+<h2 id="articlesCount">0</h2>
+
+<p>Articles</p>
+
 </div>
+
+<div class="stat">
+
+<h2 id="pdfCount">0</h2>
+
+<p>PDF Notes</p>
+
+</div>
+
+<div class="stat">
+
+<h2 id="studentsCount">0</h2>
+
+<p>Learners</p>
+
+</div>
+
+<div class="stat">
+
+<h2 id="videosCount">0</h2>
+
+<p>Videos</p>
+
+</div>
+</div> </section>
+<section class="content-grid">
+
+<div class="youtube-section">
+
+<h2>Latest Learning Videos</h2>
+
+<iframe
+width="100%"
+height="420"
+
+src="https://www.youtube.com/embed/rCA_Xe2mhFc"
+
+allowfullscreen>
+</iframe>
+
+<a href="https://youtube.com/@priyankanigam6239?si=2sx3WC7uADBMxlaf"
+target="_blank"
+class="channel-btn">
+
+Visit YouTube Channel
+
+</a>
+
+</div>
+
+<div class="labels-section">
+
+<h2>Tech Articles & Blogs</h2>
+
+<div class="circle-links">
+<div class="topic-grid">
+<a class="topic-circle" href="blogs.html?cate=Java interview Questions">Java</a>
+
+<a class="topic-circle" href="blogs.html?cate=PHP web development Questions">
+PHP
+</a>
+
+<a class="topic-circle" href="blogs.html?cate=Cloud DevOps | GitOps interview questions">
+Cloud / DevOps
+</a>
+
+<a class="topic-circle"  href="page.html?slug=make-payment-to-buy">English</a>
+
+<a class="topic-circle"  href="blogs.html?cate=Technical interview questions">
+Technical
+</a>
+
+<a class="topic-circle" href="blogs.html?cate=HR | Managerial interview Questions">
+HR / Managerial
+</a>
+
+<a class="topic-circle" href="https://technologytalents.blogspot.com/">
+Advance Tech Blogs
+</a>
+<a class="topic-circle" href="https://get2logics.blogspot.com/" >
+Personal development Blogs
+</a>
+
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="pdf-section">
+
+<div class="pdf-card">
+
+<h2>Programming PDFs</h2>
+
+<p>
+Java, Spring, Android, PHP, Cloud, DevOps Interview Resources
+</p>
+
+<a href="page.html?slug=pdf-store" class="buy-btn">
+Buy Programming PDFs
+</a>
+
+</div>
+
+<div class="pdf-card">
+
+<h2>English PDFs</h2>
+
+<p>
+Spoken English, Grammar, Vocabulary, Communication Skills
+</p>
+
+<a href="page.html?slug=make-payment-to-buy" class="buy-btn">
+Buy English PDFs
+</a>
+
+</div>
+
+</section>
+
+<footer>
 <div class="footer-help-container">
 
   <div class="help-block">
@@ -331,16 +873,173 @@ title="Site - interviewprepforinsiders">
   </div>
 
 </div>
-        <p class="copyright">
-
-        © 2026 JobsForTechWhiz
-
-        </p>
-
-    </div>
+<p>
+© 2026 TechnicalMindSpace |
+Learning Resources • Career Growth • Interview Preparation
+</p>
 
 </footer>
-<script src="theme.js"></script>
+<div id="buyDialog" class="buy-dialog">
+
+<div class="buy-box">
+
+<h3>Choose PDF Category</h3>
+
+<a href="programming-pdfs.html">
+Programming PDFs
+</a>
+
+<a href="english-pdfs.html">
+English PDFs
+</a>
+
+<button onclick="closeBuyDialog()">
+Close
+</button>
+
+</div>
+
+</div>
+<script>
+document
+.getElementById("buyBtn")
+.onclick=()=>{
+
+document
+.getElementById("buyDialog")
+.style.display="block";
+
+};
+
+function closeBuyDialog(){
+
+document
+.getElementById("buyDialog")
+.style.display="none";
+
+}
+</script>
+<div id="jftw-chat-btn">
+💬
+</div>
+
+<div id="jftw-chat-window">
+
+<div id="chat-header">
+TechnicalMindSpace Assistant
+</div>
+
+<div id="chat-messages"></div>
+
+<div id="chat-input-area">
+
+<input
+id="chat-input"
+placeholder="Ask anything...">
+
+<button id="send-btn">
+Send
+</button>
+
+</div>
+
+</div>
+<script src="js/book-tutor.js"></script>
 <script src="buy_now_dialog.js"></script>
-</body>
-</html>
+<script src="script.js"></script>
+<div id="chatbot-container"></div>
+
+<link
+rel="stylesheet"
+href="./css/chatbot.css">
+
+<script src="./js/chatbot.js"></script>
+
+<script>
+
+fetch('widget.html')
+.then(r => r.text())
+.then(html => {
+
+    document.getElementById(
+        'chatbot-container'
+    ).innerHTML = html;
+
+    const btn =
+    document.getElementById(
+        'jftw-chat-btn'
+    );
+
+    const win =
+    document.getElementById(
+        'jftw-chat-window'
+    );
+
+    document.body.appendChild(btn);
+    document.body.appendChild(win);
+
+    initChatbot();
+
+});
+
+</script>
+
+
+<script>
+  function animateCounter(
+id,
+start,
+end,
+speed
+){
+
+let count=start;
+
+const el=
+document.getElementById(id);
+
+const timer=
+setInterval(()=>{
+
+count++;
+
+el.textContent=count+"+";
+
+if(count>=end){
+
+clearInterval(timer);
+
+}
+
+},speed);
+
+}
+
+animateCounter(
+"articlesCount",
+31,
+120,
+30
+);
+
+animateCounter(
+"pdfCount",
+50,
+140,
+20
+);
+
+animateCounter(
+"studentsCount",
+100,
+1000,
+5
+);
+
+animateCounter(
+"videosCount",
+20,
+300,
+15
+);
+</script>>

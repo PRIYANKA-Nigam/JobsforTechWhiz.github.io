@@ -191,3 +191,16 @@ transform:scale(1);
 
 
 }
+
+#jftw-chat-btn{
+position:fixed !important;
+bottom:20px !important;
+right:20px !important;
+
+z-index:9999999 !important;
+pointer-events:auto !important;
+}
+
+#jftw-chat-window{
+z-index:9999999 !important;
+}

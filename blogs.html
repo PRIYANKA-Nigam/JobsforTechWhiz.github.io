@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+    <title>
+JobsForTechWhiz | Interview Questions & Tech Resources
+</title>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta
+name="description"
+content="Interview Questions, DevOps, Kubernetes, AWS, Linux, Java and technical preparation resources for job seekers.">
+<meta property="og:title"
+content="JobsForTechWhiz">
+
+<meta property="og:type"
+content="website">
+
+<meta property="og:url"
+content="https://priyanka-nigam.github.io/JobsforTechWhiz.github.io/">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="icon" href="favicon.png">
+<script src="js/book-tutor.js"></script>
+</head>
+
+<body>
+   
+    <header>
+
+<h1>
+
+<a href="index.html">
+
+JobsForTechWhiz
+
+</a>
+
+</h1>
+
+<nav>
+<div class="nav-left">
+<a href="#" onclick="showJavaGroup()">Java</a>
+
+<a href="#"
+onclick="filterCategory('Cloud DevOps | GitOps interview questions')">
+Cloud DevOps
+</a>
+
+<a href="#"
+onclick="filterCategory('PHP web development Questions')">
+PHP
+</a>
+
+<a href="#"
+onclick="filterCategory('Technical interview questions')">
+Technical
+</a>
+
+<a href="#"
+onclick="filterCategory('HR | Managerial interview Questions')">
+HR|Managerial
+</a>
+<a href="page.html?slug=book-a-tutor">
+  Book Classes
+</a>
+</div>
+
+<div class="nav-right">
+<a href="#"
+   class="buy-nav"
+   onclick="openBuyDialog();return false;">
+   💳 Buy Now
+</a>
+
+ <button id="theme-toggle">
+
+🌙 Dark Mode
+
+</button></div>
+
+</nav>
+
+</header>
+
+<input
+id="search"
+placeholder="Search posts...">
+
+<div id="category-filters"></div>
+
+<div class="page-layout">
+
+<div class="main-content">
+
+<div id="posts-container">
+
+Loading Posts...
+
+</div>
+
+<div id="pagination"></div>
+
+</div>
+
+<aside class="home-sidebar">
+
+<h3>Featured Posts</h3>
+<div id="featured-posts"></div>
+
+<h3>Categories</h3>
+<div id="sidebar-categories"></div>
+
+<h3>Latest Posts</h3>
+<div id="latest-posts"></div>
+
+</aside>
+
+</div>
+<!-- <div id="category-filters"></div>
+
+<div id="posts-container"></div>
+
+<div id="pagination"></div>
+<div id="posts-container"> -->
+
+Loading Posts...
+
+</div>
+
+<script src="script.js"></script>
+
+
+<div id="chatbot-container"></div>
+
+<link
+rel="stylesheet"
+href="/JobsforTechWhiz.github.io/css/chatbot.css">
+<script src="/JobsforTechWhiz.github.io/js/chatbot.js"></script> 
+<script>
+fetch('/JobsforTechWhiz.github.io/widget.html')
+.then(r => {
+    console.log("status:", r.status);
+    return r.text();
+}) 
+.then(html => {
+
+    console.log("widget loaded");
+
+    document.getElementById(
+        'chatbot-container'
+    ).innerHTML = html;
+
+    console.log(
+        document.getElementById(
+            'jftw-chat-btn'
+        )
+    );
+
+    initChatbot();
+
+})
+.catch(err => {
+    console.error(err);
+});
+</script>
+
+
+<!--
+<div id="jftw-chat-btn">
+💬
+</div>
+
+<div id="jftw-chat-window">
+
+<div
+style="
+padding:15px;
+background:#ff9800;
+color:white;
+font-weight:bold;
+">
+JobsForTechWhiz Assistant
+</div>
+
+<div id="jftw-messages">
+</div>
+
+<div
+style="
+display:flex;
+padding:10px;
+border-top:1px solid #eee;
+">
+
+<input
+id="jftw-input"
+placeholder="Ask a question..."
+style="
+flex:1;
+padding:10px;
+">
+
+<button
+id="jftw-send">
+Send
+</button>
+
+</div>
+
+</div>
+<link
+rel="stylesheet"
+href="css/chatbot.css">
+
+<script
+src="js/chatbot.js">
+</script>
+
+<script>
+fetch("widget.html")
+.then(r => r.text())
+.then(html => {
+
+  document
+  .getElementById(
+    "chatbot-container"
+  )
+  .innerHTML = html;
+
+});
+</script> -->
+<footer class="site-footer">
+
+    <div class="footer-content">
+
+        <h3>JobsForTechWhiz</h3>
+
+        <p>
+        Interview Preparation,
+        DevOps, Cloud,
+        Linux and Programming Resources.
+        </p>
+
+        <div class="footer-links">
+
+            <a href="index.html">
+            Home
+            </a>
+
+
+<a href="page.html?slug=about-us">
+About Us
+</a>
+
+<a href="page.html?slug=privacy-policy">
+Privacy Policy
+</a>
+
+<a href="page.html?slug=disclaimer">
+Disclaimer
+</a>
+
+<a href="page.html?slug=terms-and-conditions">
+Terms & Conditions
+</a>
+
+<a href="page.html?slug=cancellation-refund-policy">
+Refund Policy
+</a>
+
+<a href="page.html?slug=contact-us">
+Contact Us
+</a>
+ <div class="footer-right">
+<div class="footer-buy-box">
+
+<a
+href="page.html?slug=make-payment-to-buy"
+class="buy-footer-btn">
+
+🔥 Buy English PDFs
+
+</a>
+<br><br>
+
+<a href="page.html?slug=pdf-store"
+   class="pdf-store-btn">
+    📚 PDF Programming PDFs 🔥
+</a>
+</div> </div>
+</div>
+<div class="footer-help-container">
+
+  <div class="help-block">
+
+    <div class="help-title">
+      Need Help?
+    </div>
+
+   <a class="email-support-btn"
+href="mailto:pnigam342@gmail.com?subject=Contact Support"
+target="_blank">
+
+      <i class="fas fa-envelope"></i>
+      Email Support
+
+    </a>
+
+  </div>
+
+  <div class="social-icons">
+
+    <a href="https://youtube.com/@priyankanigam6239?si=2sx3WC7uADBMxlaf" 
+    title="YouTube" class="youtube-icon">
+      <i class="fab fa-youtube"></i>
+    </a>
+
+    <a href="https://wa.me/919129520224"
+target="_blank"
+title="WhatsApp" class="whatsapp-icon">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <a href="https://interviewprepforinsiders.blogspot.com/"
+target="_blank"
+title="Site - interviewprepforinsiders">
+      <img src="images/IP_logo.png">
+    </a>
+
+  </div>
+
+</div>
+        <p class="copyright">
+
+        © 2026 JobsForTechWhiz
+
+        </p>
+
+    </div>
+
+</footer>
+<script src="theme.js"></script>
+<script src="buy_now_dialog.js"></script>
+</body>
+</html>

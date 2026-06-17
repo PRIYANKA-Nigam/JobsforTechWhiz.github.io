@@ -14,7 +14,18 @@ const urlGroup =
 new URLSearchParams(   /*added this to make post page header java nav clickable */
 window.location.search 
 ).get("group");
+const cat=
+new URLSearchParams(
+location.search
+).get("cate");
 
+if(cat){
+
+currentCategory=cat;
+
+renderPosts();
+
+}
 document
 .getElementById("search")
 .addEventListener("input",function(){
