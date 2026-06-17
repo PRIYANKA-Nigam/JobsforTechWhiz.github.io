@@ -91,39 +91,64 @@ function initChatbot() {
         })
       })
       .then(r=>r.json())
-      .then(data=>{
-if(data.reply === "__FOCUS_SEARCH__"){
+    .then(data => {
 
-    const search =
-    document.getElementById("search");
+    if(data.reply === "__FOCUS_SEARCH__"){
 
-    console.log(search);
-console.log("Highlighting search");
-    if(search){
+        const search =
+        document.getElementById("search");
 
-        search.scrollIntoView({
-            behavior:"smooth",
-            block:"center"
-        });
+        if(search){
 
-        search.classList.add(
-            "search-highlight"
-        );
+            search.scrollIntoView({
+                behavior:"smooth",
+                block:"center"
+            });
 
-        setTimeout(function(){
+            search.focus();
 
-            search.classList.remove(
+            search.classList.add(
                 "search-highlight"
             );
 
-        },3000);
+            setTimeout(() => {
+
+                search.classList.remove(
+                    "search-highlight"
+                );
+
+            },3000);
+
+        }
+
+        messages.innerHTML +=
+        `<div class="bot-msg">
+        🔍 Please use the search bar above to find relevant content.
+        </div>`;
 
     }
 
-    return;
-}
-       
-      });
+    else{
+
+        messages.innerHTML +=
+        `<div class="bot-msg">
+          ${data.reply}
+        </div>`;
+
+    }
+
+    messages.scrollTop =
+    messages.scrollHeight;
+
+})
+.catch(() => {
+
+    messages.innerHTML +=
+    `<div class="bot-msg">
+      Service unavailable.
+    </div>`;
+
+});
 
     }
 
