@@ -1584,3 +1584,44 @@ body{
 .site-footer{
     outline:3px solid green !important;
 }
+@media (max-width:768px){
+
+    #jftw-chat-btn{
+        position:fixed !important;
+
+        right:15px !important;
+
+        /* move much higher */
+        bottom:90px !important;
+
+        left:auto !important;
+        top:auto !important;
+
+        z-index:999999 !important;
+    }
+
+    #jftw-chat-window{
+        bottom:150px !important;
+    }
+
+}
+@media (max-width:768px){
+
+    .footer-links{
+        margin:10px 0 !important;
+    }
+
+    .footer-links a{
+        margin:0 6px !important;
+        line-height:1.2 !important;
+    }
+
+    .footer-help-container{
+        margin-top:10px !important;
+    }
+
+    .site-footer{
+        padding:15px 10px !important;
+    }
+
+}
