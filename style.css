@@ -1561,3 +1561,26 @@ body{
     height:auto !important;
     min-height:auto !important;
 }
+.container{
+    height:auto !important;
+    min-height:0 !important;
+}
+
+#page-content{
+    height:auto !important;
+    min-height:0 !important;
+    margin-bottom:0 !important;
+    padding-bottom:0 !important;
+}
+
+.container{
+    outline:3px solid red !important;
+}
+
+#page-content{
+    outline:3px solid blue !important;
+}
+
+.site-footer{
+    outline:3px solid green !important;
+}
