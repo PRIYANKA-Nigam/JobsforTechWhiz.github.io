@@ -4,7 +4,18 @@ window.location.search
 ).get("slug");
 
 function loadPage(data){
+data.feed.entry.forEach(item => {
 
+    console.log(
+        item.title.$t,
+        "=>",
+        item.title.$t
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g,"-")
+        .replace(/^-|-$/g,"")
+    );
+
+});
     const page =
     data.feed.entry.find(item=>{
 
@@ -27,6 +38,8 @@ function loadPage(data){
 
         return;
     }
+    console.log(page);
+console.log(page.content.$t);
 let content = page.content.$t;
 content = content.replace(
     /Interview\s*Prep\s*For\s*Insiders/gi,
@@ -143,6 +156,64 @@ alt="Live Chat">
     <h1>${page.title.$t}</h1> 
     ${content}   
 `;
+
+setTimeout(() => {
+
+    if(typeof buyPDF === "function"){
+
+        window.buyPDF = function(pdfId){
+
+            window.location.href =
+            "page.html?slug=payment&pdf=" +
+            encodeURIComponent(pdfId);
+
+        };
+
+    }
+
+},500);
+setTimeout(() => {
+
+    document
+    .querySelectorAll('#page-content script')
+    .forEach(oldScript => {
+
+        const s =
+        document.createElement('script');
+
+        if(oldScript.src){
+            s.src = oldScript.src;
+        }else{
+            s.textContent =
+            oldScript.textContent;
+        }
+
+        document.body.appendChild(s);
+
+    });
+
+},100);
+document
+.querySelectorAll('#page-content a')
+.forEach(link => {
+
+    const href = link.getAttribute('href');
+
+    if(
+        href &&
+        href.startsWith('/p/')
+    ){
+
+        const slug = href
+        .replace('/p/','')
+        .replace('.html','');
+
+        link.href =
+        `page.html?slug=${slug}`;
+    }
+
+});
+
 }
 
 const script =
