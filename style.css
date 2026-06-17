@@ -1566,3 +1566,30 @@ font-size:18px;
 .footer-help-container{
     margin-top:10px !important;
 }
+@media (max-width:768px){
+
+    .site-footer{
+        padding:10px 8px !important;
+    }
+
+    .footer-content{
+        gap:8px !important;
+    }
+
+    .footer-links{
+        margin:6px 0 !important;
+    }
+
+    .footer-help-container{
+        margin-top:6px !important;
+    }
+
+    .footer-content h3{
+        margin:0 !important;
+    }
+
+    .footer-content p{
+        margin:4px 0 !important;
+    }
+
+}
