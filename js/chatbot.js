@@ -92,17 +92,6 @@ function initChatbot() {
       })
       .then(r=>r.json())
       .then(data=>{
-
-        messages.innerHTML +=
-        `<div class="bot-msg">
-          ${data.reply}
-        </div>`;
-
-      });
-
-    }
-
-}
 if(data.reply === "__FOCUS_SEARCH__"){
 
     const search =
@@ -132,4 +121,10 @@ console.log("Highlighting search");
     }
 
     return;
+}
+       
+      });
+
+    }
+
 }

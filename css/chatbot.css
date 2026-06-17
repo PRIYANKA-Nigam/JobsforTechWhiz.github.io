@@ -45,35 +45,32 @@ z-index:999999;
 
 }
 #jftw-chat-window{
- flex-direction:column;
+
 position:fixed;
- display:none;
-bottom:95px;
 right:20px;
+bottom:90px;
 
-width:360px;
-height:520px;
+width:420px;      /* increased width */
+height:420px;     /* reduced height */
 
-background:white;
+background:#fff;
 
-border-radius:16px;
+border-radius:15px;
 
 display:none;
-
 flex-direction:column;
 
 box-shadow:
-0 12px 30px rgba(0,0,0,.25);
+0 10px 25px rgba(0,0,0,.25);
 
-z-index:999999;
+z-index:99999;
 
 }
-
 #jftw-messages{
 
 flex:1;
 
-padding:15px;
+padding:12px;
 
 overflow-y:auto;
 
@@ -151,17 +148,19 @@ transform:translateY(-2px);
 
 @media(max-width:768px){
 
-  #jftw-chat-btn{
-      right:12px !important;
-      left:auto !important;
-      transform:none !important;
-  }
+#jftw-chat-window{
 
-  #jftw-chat-window{
-      right:10px !important;
-      left:auto !important;
-      max-width:calc(100vw - 20px) !important;
-  }
+width:95vw;
+
+max-width:420px;
+
+height:420px;
+
+right:10px;
+
+bottom:80px;
+
+}
 
 }
 
