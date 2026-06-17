@@ -1550,46 +1550,32 @@ font-size:18px;
     font-size:16px !important;
     border-radius:0 !important;    /* optional: remove rounded gaps */
 }
+html,
+body{
+    margin:0;
+    padding:0;
+    height:auto !important;
+    min-height:auto !important;
+}
+
+.container{
+    height:auto !important;
+    min-height:0 !important;
+}
+
 .site-footer{
-    padding:15px 10px !important;
+    margin-top:20px !important;
 }
 
-.footer-links{
-    margin:10px 0 !important;
-}
-
-.footer-links a{
-    margin:0 6px !important;
-    line-height:1.2 !important;
-}
-
-.footer-help-container{
-    margin-top:10px !important;
-}
 @media (max-width:768px){
 
-    .site-footer{
-        padding:10px 8px !important;
+    #jftw-chat-btn{
+        bottom:120px !important;
+        right:15px !important;
     }
 
-    .footer-content{
-        gap:8px !important;
-    }
-
-    .footer-links{
-        margin:6px 0 !important;
-    }
-
-    .footer-help-container{
-        margin-top:6px !important;
-    }
-
-    .footer-content h3{
-        margin:0 !important;
-    }
-
-    .footer-content p{
-        margin:4px 0 !important;
+    #jftw-chat-window{
+        bottom:180px !important;
     }
 
 }
