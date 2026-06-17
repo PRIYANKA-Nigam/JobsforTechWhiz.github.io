@@ -1625,3 +1625,14 @@ body{
     }
 
 }
+@media(max-width:768px){
+
+#jftw-chat-btn{
+    position:fixed !important;
+    bottom:120px !important;
+    right:15px !important;
+
+    transform:none !important;
+}
+
+}
