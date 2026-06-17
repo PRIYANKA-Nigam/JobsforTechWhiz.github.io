@@ -1550,131 +1550,6 @@ font-size:18px;
     font-size:16px !important;
     border-radius:0 !important;    /* optional: remove rounded gaps */
 }
-.container,
-#page-content{
-    height:auto !important;
-    min-height:0 !important;
-    max-height:none !important;
-}
-
-body{
-    height:auto !important;
-    min-height:auto !important;
-}
-.container{
-    height:auto !important;
-    min-height:0 !important;
-}
-
-#page-content{
-    height:auto !important;
-    min-height:0 !important;
-    margin-bottom:0 !important;
-    padding-bottom:0 !important;
-}
-
-@media (max-width:768px){
-
-    #jftw-chat-btn{
-        position:fixed !important;
-
-        right:15px !important;
-
-        /* move much higher */
-        bottom:90px !important;
-
-        left:auto !important;
-        top:auto !important;
-
-        z-index:999999 !important;
-    }
-
-    #jftw-chat-window{
-        bottom:150px !important;
-    }
-
-}
-@media (max-width:768px){
-
-    .footer-links{
-        margin:10px 0 !important;
-    }
-
-    .footer-links a{
-        margin:0 6px !important;
-        line-height:1.2 !important;
-    }
-
-    .footer-help-container{
-        margin-top:10px !important;
-    }
-
-    .site-footer{
-        padding:15px 10px !important;
-    }
-
-}
-@media(max-width:768px){
-
-#jftw-chat-btn{
-    position:fixed !important;
-    bottom:120px !important;
-    right:15px !important;
-
-    transform:none !important;
-}
-
-}
-@media (max-width:768px){
-
-body #jftw-chat-btn{
-    bottom:120px !important;
-    right:15px !important;
-}
-
-body #jftw-chat-window{
-    bottom:180px !important;
-}
-
-}
-@media (max-width:768px){
-
-    #jftw-chat-btn{
-        bottom:120px !important;
-    }
-
-}
-html,
-body{
-    min-height:100vh;
-    margin:0;
-}
-
-body{
-    display:flex;
-    flex-direction:column;
-}
-
-.container{
-    flex:1;
-}
-
-.site-footer{
-    margin-top:auto;
-}
-@media (max-width:768px){
-
-    #jftw-chat-btn{
-        bottom:120px !important;
-        right:15px !important;
-    }
-
-    #jftw-chat-window{
-        bottom:180px !important;
-    }
-
-}
-
 .site-footer{
     padding:15px 10px !important;
 }
@@ -1685,16 +1560,9 @@ body{
 
 .footer-links a{
     margin:0 6px !important;
+    line-height:1.2 !important;
 }
 
 .footer-help-container{
     margin-top:10px !important;
-}
-
-#jftw-chat-btn{
-    bottom:120px !important;
-}
-
-#jftw-chat-window{
-    bottom:180px !important;
 }
