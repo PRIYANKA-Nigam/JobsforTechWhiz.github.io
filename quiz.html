@@ -63,9 +63,10 @@ HR|Managerial
 </div>
 
 <div class="nav-right">
-<a href="page.html?slug=make-payment-to-buy"
-class="buy-nav">
-💳 Buy Now
+<a href="#"
+   class="buy-nav"
+   onclick="openBuyDialog();return false;">
+   💳 Buy Now
 </a>
 
  <button id="theme-toggle">
@@ -1629,7 +1630,12 @@ class="buy-footer-btn">
 🔥 Buy Interview PDFs
 
 </a>
+<br><br>
 
+<a href="page.html?slug=pdf-store"
+   class="pdf-store-btn">
+    📚 PDF Programming PDFs 🔥
+</a>
 </div> </div>
 </div>
 
@@ -1687,5 +1693,6 @@ title="Site - interviewprepforinsiders">
 
 </footer>
 <script src="theme.js"></script>
+<script src="buy_now_dialog.js"></script>
 </body>
 </html>
