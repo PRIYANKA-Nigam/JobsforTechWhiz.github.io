@@ -1573,17 +1573,6 @@ body{
     padding-bottom:0 !important;
 }
 
-.container{
-    outline:3px solid red !important;
-}
-
-#page-content{
-    outline:3px solid blue !important;
-}
-
-.site-footer{
-    outline:3px solid green !important;
-}
 @media (max-width:768px){
 
     #jftw-chat-btn{
@@ -1635,4 +1624,49 @@ body{
     transform:none !important;
 }
 
+}
+@media (max-width:768px){
+
+body #jftw-chat-btn{
+    bottom:120px !important;
+    right:15px !important;
+}
+
+body #jftw-chat-window{
+    bottom:180px !important;
+}
+
+}
+@media (max-width:768px){
+
+    #jftw-chat-btn{
+        bottom:120px !important;
+    }
+
+}
+html,
+body{
+    min-height:100vh;
+}
+
+body{
+    display:flex;
+    flex-direction:column;
+}
+
+.container{
+    flex:1 0 auto;
+}
+
+.site-footer{
+    flex-shrink:0;
+}
+body{
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
+}
+
+.container{
+    flex:1;
 }
