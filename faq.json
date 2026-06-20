@@ -5,7 +5,7 @@
 "pay",
 "upi",
 "card",
-"purchase"
+"purchase","options to buy","buying methods"
 ],
 
 "answer":
@@ -34,7 +34,7 @@
 {
 "keywords":[
 "download",
-"pdf",
+"receive pdf","get these books","get books",
 "get pdf"
 ],
 
@@ -81,8 +81,7 @@
 },
 {
   "keywords": [
-    "git","cloud computing","DevOps","gitOps","docker","container","kubernetes","unix","linux","app security","cloud operations",
-    "microservice","Azure","AWS","GCP","serverless","CQRS"
+    "git","unix","linux","gitOps"
   ],
   "answer": "We provide such related interview PDFs and resources on our website.",
    "action":"category",
@@ -90,6 +89,23 @@
 },
 {
   "keywords": [
+   "cloud computing","DevOps","cloud operations",
+  "Azure","AWS","GCP"
+  ],
+  "answer": "We provide such related interview PDFs and resources on our website.",
+   "action":"category",
+  "category":"Cloud DevOps | GitOps interview questions"
+},
+{
+  "keywords": [
+  "docker","container","kubernetes","app security",
+    "microservice","serverless","CQRS"
+  ],
+  "answer": "We provide such related interview PDFs and resources on our website.",
+   "action":"category",
+  "category":"Cloud DevOps | GitOps interview questions"
+},
+ { "keywords": [
     "hr","managerial","hr interview questions","freshers basic interview questions","hr panel round","for fresher experienced candidates",
     "hr search","company specific questions","general hr"
   ],
@@ -99,8 +115,7 @@
 },
 {
   "keywords": [
-    "jira","json","terraform","kafka","Maven","gradle","CI/CD","build pipelines","client-server architecture",
-    "project tracking tool","project standards"
+    "json","terraform","kafka","Maven","gradle"
   ],
   "answer": "We have interview related content for such topics.U can find similar post here",
    "action":"category",
@@ -108,8 +123,34 @@
 },
 {
   "keywords": [
-   "Web standards","Authorization token","API Key","Oauth","Auth token",
-    "http protocols","websocket","REST endpoints","swagger","postman","jwt","jackson","JSONP","SOAP REST"
+    "jira","CI/CD","build pipelines","client-server architecture",
+    "project tracking tool"
+  ],
+  "answer": "We have interview related content for such topics.U can find similar post here",
+   "action":"category",
+  "category":"Technical interview questions"
+},
+{
+  "keywords": [
+   "Authorization token","API Key","Oauth","Auth token","jwt"
+  ],
+  "answer": "We have interview related content for such topics.U can find similar post here",
+   "action":"category",
+  "category":"Technical interview questions"
+}
+,
+{
+  "keywords": [
+ "jackson","JSONP","SOAP REST"
+  ],
+  "answer": "We have interview related content for such topics.U can find similar post here",
+   "action":"category",
+  "category":"Technical interview questions"
+},
+{
+  "keywords": [
+   "Web standards","project standards",
+    "http protocols","websocket","REST endpoints","swagger","postman"
   ],
   "answer": "We have interview related content for such topics.U can find similar post here",
    "action":"category",
@@ -117,8 +158,23 @@
 },
 {
 "keywords":[
-"AI","GenAI","Agentic AI","Vibe coding","prompt engineering","inner engineering","elastic search","RAG pipeline",
-"Deep learning","ML","Data science","vector search"
+"AI","GenAI","Agentic AI","Deep learning","ML","Data science","Machine Learning"
+],
+
+"answer":"🔍 For any technical query, use the Search Bar available at the top of this page. Enter keywords like Java, Spring Boot, Android, AI, Cloud, Interview Questions, etc.<br><br>📚 For advanced-level topics, visit: <a href=\"https://technologytalents.blogspot.com/\" target=\"_blank\" class=\"chat-payment-link\">Tech Blogs</a>"
+},
+{
+"keywords":[
+"Vibe coding","prompt engineering","inner engineering"
+],
+
+"answer":"🔍 For any technical query, use the Search Bar available at the top of this page. Enter keywords like Java, Spring Boot, Android, AI, Cloud, Interview Questions, etc.<br><br>📚 For advanced-level topics, visit: <a href=\"https://technologytalents.blogspot.com/\" target=\"_blank\" class=\"chat-payment-link\">Tech Blogs</a>"
+},
+
+{
+"keywords":[
+"elastic search","RAG pipeline",
+"vector search"
 ],
 
 "answer":"🔍 For any technical query, use the Search Bar available at the top of this page. Enter keywords like Java, Spring Boot, Android, AI, Cloud, Interview Questions, etc.<br><br>📚 For advanced-level topics, visit: <a href=\"https://technologytalents.blogspot.com/\" target=\"_blank\" class=\"chat-payment-link\">Tech Blogs</a>"
