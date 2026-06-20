@@ -1,0 +1,117 @@
+ .site-footer{
+    background:#08152f;
+    color:#fff;
+    padding:30px 40px;
+}
+
+.footer-content{
+    max-width:1200px;
+    margin:auto;
+}
+
+.footer-links{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    background-color: blue;
+    margin-top:15px;
+    margin-bottom:35px;
+}
+
+.footer-links a{
+    color:#fff;
+    text-decoration:none;
+}
+
+/* 3-column row */
+
+.footer-bottom-row{
+
+    display:grid;
+
+    grid-template-columns:
+    1fr 1fr 1fr;
+
+    align-items:start;
+
+    gap:40px;
+}
+
+.footer-buy-box,
+.footer-author-column,
+.footer-help-container{
+
+    justify-self:center;
+}
+
+/* BUY COLUMN */
+
+.footer-buy-box{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:18px;
+}
+.buy-footer-btn,
+.pdf-store-btn{
+
+    width:260px;
+
+    min-height:58px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    box-sizing:border-box;
+}
+
+/* AUTHOR COLUMN */
+
+.footer-author-column{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:10px;
+
+    text-align:center;
+}
+
+/* HELP COLUMN */
+
+.footer-help-container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+}
+
+.social-icons{
+    display:flex;
+    gap:15px;
+    margin-top:15px;
+
+    justify-content:center;
+
+    width:100%;
+}
+
+.copyright{
+
+    text-align:center;
+
+    margin-top:40px;
+
+    border-top:
+    1px solid rgba(255,255,255,.15);
+
+    padding-top:20px;
+}

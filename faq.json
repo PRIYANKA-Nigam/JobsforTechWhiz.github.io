@@ -73,7 +73,7 @@
 },
 {
   "keywords": [
-    "php web apps","php backend","php rest app","website development","php app designing","php native,web,hybrid application"
+    "php web apps","php backend","php rest app","php website development","php app designing","php native,web,hybrid application"
   ],
   "answer": "PHP app development interview PDFs and resources are available on the website.",
    "action":"category",
@@ -160,10 +160,18 @@
 {
   "keywords": [
     "best language for website","how to design website","how to create app","good programming languages for app designing",
-    "website development",
+    "website development","website building","website designing","JS","Javascript",
     "site designing","web apps development","Top Known languages for website development","best framework for site creation"
   ],
-  "answer": "Javascript is 1 of most promiment , widely used language for both front end and backend task.U can search online to find more on it.In this website , we have post for website developmwnt with PHP IN backend and using JQuery (as an advance JS Library) for UI designing. "
+  "answer": "Javascript is 1 of most promiment , widely used language for both front end and backend task.U can search online to find more on it.In this website , we have post for website developmwnt with PHP in backend and using JQuery (as an advance JS Library) for UI designing. "
+}
+,
+{
+  "keywords": [
+    "programming languages","scripting languages","server side languages","client side languages",
+  "compiler based","interpreter based","markup","tagged","command Line Languages"
+  ],
+  "answer": "We included certain languages like in <br>Programming Languages - Java ,PHP,JQuery(JS library),Spring Boot(Framework of Java)<br>Scripting Languages - PHP, JQuery(JS library)<br>Markup Languages - HTML<br>Command Line Languages - Git(Linux Based) , Unix<br><br>🔍 For any technical query, use the Search Bar available at the top of this page. Enter keywords like Java, Spring Boot, Android, AI, Cloud, Interview Questions, etc.<br><br>📚 For advanced-level topics, visit: <a href=\"https://technologytalents.blogspot.com/\" target=\"_blank\" class=\"chat-payment-link\">Tech Blogs</a>  "
 }
 ,
 {

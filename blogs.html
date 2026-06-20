@@ -166,75 +166,11 @@ fetch('/JobsforTechWhiz.github.io/widget.html')
 </script>
 
 
-<!--
-<div id="jftw-chat-btn">
-💬
-</div>
-
-<div id="jftw-chat-window">
-
-<div
-style="
-padding:15px;
-background:#ff9800;
-color:white;
-font-weight:bold;
-">
-JobsForTechWhiz Assistant
-</div>
-
-<div id="jftw-messages">
-</div>
-
-<div
-style="
-display:flex;
-padding:10px;
-border-top:1px solid #eee;
-">
-
-<input
-id="jftw-input"
-placeholder="Ask a question..."
-style="
-flex:1;
-padding:10px;
-">
-
-<button
-id="jftw-send">
-Send
-</button>
-
-</div>
-
-</div>
-<link
-rel="stylesheet"
-href="css/chatbot.css">
-
-<script
-src="js/chatbot.js">
-</script>
-
-<script>
-fetch("widget.html")
-.then(r => r.text())
-.then(html => {
-
-  document
-  .getElementById(
-    "chatbot-container"
-  )
-  .innerHTML = html;
-
-});
-</script> -->
 <footer class="site-footer">
 
     <div class="footer-content">
 
-        <h3>JobsForTechWhiz</h3>
+        <h2>JobsForTechWhiz</h2>
 
         <p>
         Interview Preparation,
@@ -376,124 +312,9 @@ title="Site - interviewprepforinsiders">
     </div>
 
 </footer>
-<style>
-  .site-footer{
-    background:#08152f;
-    color:#fff;
-    padding:30px 40px;
-}
 
-.footer-content{
-    max-width:1200px;
-    margin:auto;
-}
+  <link rel="stylesheet" href="footer.css">
 
-.footer-links{
-    display:flex;
-    flex-wrap:wrap;
-    gap:20px;
-    margin-top:15px;
-    margin-bottom:35px;
-}
-
-.footer-links a{
-    color:#fff;
-    text-decoration:none;
-}
-
-/* 3-column row */
-
-.footer-bottom-row{
-
-    display:grid;
-
-    grid-template-columns:
-    1fr 1fr 1fr;
-
-    align-items:start;
-
-    gap:40px;
-}
-
-.footer-buy-box,
-.footer-author-column,
-.footer-help-container{
-
-    justify-self:center;
-}
-
-/* BUY COLUMN */
-
-.footer-buy-box{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:18px;
-}
-.buy-footer-btn,
-.pdf-store-btn{
-
-    width:260px;
-
-    min-height:58px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    text-align:center;
-
-    box-sizing:border-box;
-}
-
-/* AUTHOR COLUMN */
-
-.footer-author-column{
-
-    display:flex;
-
-    flex-direction:column;
-
-    align-items:center;
-
-    gap:10px;
-
-    text-align:center;
-}
-
-/* HELP COLUMN */
-
-.footer-help-container{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    text-align:center;
-}
-
-.social-icons{
-    display:flex;
-    gap:15px;
-    margin-top:15px;
-
-    justify-content:center;
-
-    width:100%;
-}
-
-.copyright{
-
-    text-align:center;
-
-    margin-top:40px;
-
-    border-top:
-    1px solid rgba(255,255,255,.15);
-
-    padding-top:20px;
-}
-</style>
 <script src="theme.js"></script>
 <script src="buy_now_dialog.js"></script>
 </body>
