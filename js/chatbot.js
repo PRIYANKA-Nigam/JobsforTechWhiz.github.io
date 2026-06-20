@@ -100,31 +100,37 @@ function initChatbot() {
 
         if(search){
 
-            search.scrollIntoView({
-                behavior:"smooth",
-                block:"center"
-            });
+    search.scrollIntoView({
+        behavior:"smooth",
+        block:"center"
+    });
 
-            search.focus();
+    search.focus();
 
-            search.classList.add(
-                "search-highlight"
-            );
+    search.classList.add(
+        "search-highlight"
+    );
 
-            setTimeout(() => {
+    setTimeout(() => {
 
-                search.classList.remove(
-                    "search-highlight"
-                );
+        search.classList.remove(
+            "search-highlight"
+        );
 
-            },3000);
+    },3000);
 
-        }
+}else{
 
-        messages.innerHTML +=
-        `<div class="bot-msg">
-        🔍 Please use the search bar above to find relevant content.
-        </div>`;
+    const query =
+    encodeURIComponent(msg);
+
+    window.location.href =
+    `blogs.html?search=${query}`;
+
+    return;
+
+}
+       
 
     }
 

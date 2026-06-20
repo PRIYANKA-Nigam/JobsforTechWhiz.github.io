@@ -28,7 +28,9 @@
 ],
 
 "answer":
-"We provide Java interview preparation resources and PDFs."
+"We provide Java interview preparation resources and PDFs.",
+ "action":"category",
+  "category":"Java interview Questions"
 },
 
 {

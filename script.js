@@ -5,6 +5,41 @@ let currentPage = 1;
 const postsPerPage = 9;
 let currentCategory = "All";
 
+const params =
+new URLSearchParams( /*added this to search exact user query on search_focus */
+window.location.search
+);
+
+const q =
+params.get("search");
+
+if(q){
+
+    const searchBox =
+    document.getElementById("search");
+
+    if(searchBox){
+
+        searchBox.value = q;
+
+        searchTerm =
+        q.toLowerCase();
+
+        renderPosts();
+
+        searchBox.classList.add(
+            "search-highlight"
+        );
+
+        searchBox.scrollIntoView({
+            behavior:"smooth",
+            block:"center"
+        });
+
+    }
+
+}
+
 const urlCategory =
 new URLSearchParams(   /*added this to make post page header nav clickable */
 window.location.search
