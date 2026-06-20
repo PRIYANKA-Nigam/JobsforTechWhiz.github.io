@@ -57,7 +57,7 @@
 },
 {
 "keywords":[
-"pdf","book","courses","content","learning material","booklet","guide"
+"pdf","book","courses","learning material","booklet","guide"
 ],
 
 "answer":
@@ -81,7 +81,23 @@
 },
 {
 "keywords":[
-"java","core java","Advance Java","Java awt","Java FX","Desktop Apps"
+"java",
+"core java",
+"advanced java",
+"java interview",
+"java interview questions",
+"java tutorial",
+"java articles",
+"java blogs",
+"java notes",
+"java pdf",
+"java resources",
+"java learning",
+"java course",
+"java preparation",
+"java awt",
+"java fx",
+"desktop apps"
 ],
 
 "answer":
@@ -93,7 +109,31 @@
 {
   "keywords": [
     "spring boot pdf",
-    "spring boot notes","Spring framework"
+    "spring boot notes","Spring framework",
+     "spring",  "learn spring boot",
+    "spring boot", "spring topics",
+    "spring framework",
+    "spring interview",
+    "spring interview questions",
+    "spring boot interview",
+    "spring boot questions",
+    "spring boot pdf",
+    "spring notes", "show spring articles",
+    "spring articles",
+    "spring blogs", "spring resources",
+    "spring tutorial",
+    "spring boot tutorial",
+    "spring boot course",
+    "spring boot learning",
+    "spring boot resources",
+    "spring boot preparation",
+    "spring mvc", "spring preparation",
+    "spring security",
+    "spring data jpa",
+    "hibernate",
+    "dependency injection",
+    "ioc container",
+    "microservices","java spring"
   ],
   "answer": "Spring Boot interview PDFs and resources are available on the website.",
    "action":"category",
@@ -102,7 +142,31 @@
 {
   "keywords": [
     "android pdf","android courses", "app development","android activity","android with Java","android app designing notes",
-    "android application","android studio","Volley","retrofit","app components","android app architecture"
+    "android application","android studio","Volley","retrofit","app components","android app architecture",
+     "android",
+    "android interview","learn android",
+    "android interview questions",
+    "android questions",
+    "android pdf", "show android articles",
+    "android notes", "android topics",
+    "android articles",  "android resources",
+    "android blogs",
+    "android development",
+    "android app development",
+    "android app",  "android preparation",
+    "android studio",
+    "android tutorial",
+    "android learning",
+    "android preparation",
+    "android resources",
+    "android jobs",
+    "android course",
+    "broadcast receiver",
+    "content provider",
+    "intent",
+    "activity lifecycle",
+    "service lifecycle",
+    "android java", "mobile development"
   ],
   "answer": "Android app development interview PDFs and resources are available on the website.",
    "action":"category",
@@ -111,6 +175,30 @@
 {
   "keywords": [
     "php web apps","php backend","php rest app","php website development","php app designing","php native,web,hybrid application"
+    , "php",  "learn php",
+    "php interview",
+    "php interview questions",
+    "php questions",
+    "php pdf",  "show php articles",
+    "php notes", "php topics",
+    "php articles",
+    "php blogs", "php resources",
+    "php tutorial",
+    "php course",
+    "php learning",
+    "php preparation",
+    "php resources",
+    "php development",
+    "web development",
+    "backend development",
+    "php mysql", "php preparation",
+    "laravel","Codeigniter",
+    "php framework",
+    "server side scripting",
+    "xampp",
+    "wamp",
+    "apache php",
+    "php jobs"
   ],
   "answer": "PHP app development interview PDFs and resources are available on the website.",
    "action":"category",
@@ -152,7 +240,27 @@
 },
 {
   "keywords": [
-    "json","terraform","kafka","Maven","gradle"
+    "jira",
+"confluence",
+"scrum",
+"agile",
+"sprint planning",
+"postman",
+"swagger",
+"openapi",
+"rest api",
+"soap",
+"terraform",
+"infrastructure as code",
+"kafka",
+"message broker",
+"rabbitmq",
+"json",
+"xml",
+"jwt",
+"oauth",
+"api key",
+"microservices"
   ],
   "answer": "We have interview related content for such topics.U can find similar post here",
    "action":"category",
@@ -195,7 +303,21 @@
 },
 {
 "keywords":[
-"AI","GenAI","Agentic AI","Deep learning","ML","Data science","Machine Learning"
+"artificial intelligence",
+"chatgpt",
+"openai",
+"llm",
+"large language model",
+"machine learning",
+"deep learning",
+"prompt engineering",
+"generative ai",
+"agentic ai",
+"autonomous agent",
+"langchain",
+"rag",
+"vector database",
+"embedding"
 ],
 
 "answer":"🔍 For any technical query, use the Search Bar available at the top of this page. Enter keywords like Java, Spring Boot, Android, AI, Cloud, Interview Questions, etc.<br><br>📚 For advanced-level topics, visit: <a href=\"https://technologytalents.blogspot.com/\" target=\"_blank\" class=\"chat-payment-link\">Tech Blogs</a>"
@@ -211,7 +333,7 @@
 {
 "keywords":[
 "elastic search","RAG pipeline",
-"vector search"
+"vector search","CORS"
 ],
 
 "answer":"🔍 For any technical query, use the Search Bar available at the top of this page. Enter keywords like Java, Spring Boot, Android, AI, Cloud, Interview Questions, etc.<br><br>📚 For advanced-level topics, visit: <a href=\"https://technologytalents.blogspot.com/\" target=\"_blank\" class=\"chat-payment-link\">Tech Blogs</a>"
@@ -219,7 +341,21 @@
 
 {
   "keywords":["search","find topic","get post","fetch blogs","technical articles","important stuffs","relevant blogs"
-,"quick search","navigate","direct","redirect","move","jump","seek","look","see"
+,"quick search","navigate","direct","redirect","move","jump","seek","look","see",
+"find",
+"show",
+"show me",
+"where can i find",
+"locate",
+"browse",
+"view articles",
+"related articles",
+"related blogs",
+"all posts",
+"available topics",
+"topic list",
+"categories",
+"learning resources"
 ],
   "answer":"__FOCUS_SEARCH__"
 },
@@ -269,9 +405,14 @@
 {
   "keywords": [
     "this site",
-    "content available","site info","relevant topics","about website","content available"
+    "content available","site info","relevant topics","about website","content available",
+    "what is technicalmindspace",
+    "about technicalmindspace",
+    "what is this website",
+    "about this site",
+    "what content do you provide"
   ],
-  "answer": "This site includes basic to advanced technical content on Programming, AI, Cloud, and job-related topics.<br><br>We also provide premium learning resources and live mentoring sessions.<br><br><a href='/JobsforTechWhiz.github.io/page.html?slug=book-a-tutor' target='_blank' class='chat-payment-link'>📚 Book a Live Class</a>"
+  "answer": "TechnicalMindSpace provides interview preparation content, technical articles, programming resources, English communication material, DevOps and Cloud learning resources, premium PDFs and mentoring sessions.<br><br>This site includes basic to advanced technical content on Programming, AI, Cloud, and job-related topics.<br><br>We also provide premium learning resources and live mentoring sessions.<br><br><a href='/JobsforTechWhiz.github.io/page.html?slug=book-a-tutor' target='_blank' class='chat-payment-link'>📚 Book a Live Class</a>"
 }
 ,
 
