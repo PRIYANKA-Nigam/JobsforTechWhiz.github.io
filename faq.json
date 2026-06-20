@@ -23,7 +23,7 @@
 },
 {
 "keywords":[
-"Programming course",
+"Buy Programming course","purchase technical interview book","technical interview PDFs","Engineering Notes",
 "Technical interview pdf","Buy technical pdfs","Technical Notes","Online purchase for technical content","get Online coding courses",
 "get Online programming courses","Purchase technical notes online"
 ],
@@ -56,7 +56,7 @@
 {
   "keywords": [
     "spring boot pdf",
-    "spring boot notes"
+    "spring boot notes","Spring framework"
   ],
   "answer": "Spring Boot interview PDFs and resources are available on the website.",
    "action":"category",
@@ -100,14 +100,21 @@
 {
   "keywords": [
     "jira","json","terraform","kafka","Maven","gradle","CI/CD","build pipelines","client-server architecture",
-    "project tracking tool","project standards","Web standards","Authorization token","API Key","Oauth","Auth token",
+    "project tracking tool","project standards"
+  ],
+  "answer": "We have interview related content for such topics.U can find similar post here",
+   "action":"category",
+  "category":"Technical interview questions"
+},
+{
+  "keywords": [
+   "Web standards","Authorization token","API Key","Oauth","Auth token",
     "http protocols","websocket","REST endpoints","swagger","postman","jwt","jackson","JSONP","SOAP REST"
   ],
   "answer": "We have interview related content for such topics.U can find similar post here",
    "action":"category",
   "category":"Technical interview questions"
 },
-
 {
 "keywords":[
 "AI","GenAI","Agentic AI","Vibe coding","prompt engineering","inner engineering","elastic search","RAG pipeline",
