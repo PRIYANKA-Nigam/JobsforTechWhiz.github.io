@@ -92,7 +92,7 @@ function initChatbot() {
       })
       .then(r=>r.json())
     .then(data => {
-
+console.log("BOT DATA =", data);
     if(data.reply === "__FOCUS_SEARCH__"){
 
         const search =
